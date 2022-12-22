@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scroll Animation</title>
+    <style>
+        .container{
+            width:100px;
+            height:100px;
+            background-color: chocolate;
+            text-align: center;
+            position: fixed;
+            top: 50%;
+            left: -50%;
+            transform: translateX(-50%);
+            transition: 1s all;
+        }
+    </style>
+</head>
+<body style="background-color: #282C34;">
+    
+
+    <div class="container">
+        Hello World
+    </div>
+
+    <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita harum provident modi dolores cumque maiores at numquam dolore reprehenderit id doloribus fuga voluptates officia voluptate libero laborum, assumenda quos odit consequatur magnam voluptatibus earum a! Id a, earum ex et aut architecto ipsum, ad numquam at autem facere sapiente ut ab quibusdam vero veniam repellat quam quas dolores provident animi, quo adipisci consequatur. Animi doloribus officia similique necessitatibus exercitationem ducimus aut nesciunt, id alias beatae tempore suscipit voluptates, vero vitae dignissimos? Quo nisi, repellendus delectus numquam non voluptatem sunt itaque error temporibus libero ex laudantium eum hic esse magnam quae animi sapiente facere aut odit ipsum quibusdam fuga nemo similique? Ad facere a quisquam aliquam consequuntur, fuga distinctio, pariatur similique odit officia velit beatae nobis quasi aperiam adipisci aut nam autem mollitia. Est impedit ratione vitae facere, nobis cupiditate doloremque necessitatibus numquam consequatur, alias perferendis. Officiis reiciendis, perferendis possimus repellendus totam est officia doloremque, blanditiis sed adipisci praesentium ad quas nam aspernatur ea ipsam ullam. Provident quod laboriosam animi dolores ipsam odit qui ex rerum recusandae placeat tempora, perferendis sequi adipisci fugit voluptates praesentium eveniet sed ea. Sint, maxime? Sit repellendus beatae quis aut alias ullam tempore modi! Nostrum similique iste aliquid repudiandae unde! Officiis deserunt, neque quae ut et doloremque a dolore magni facere repellat eos omnis consequuntur quaerat earum eaque fuga aliquam non soluta corrupti explicabo error repellendus asperiores cumque! Odit hic quia mollitia deleniti? Dolore odit natus consequuntur. Culpa molestiae harum nesciunt facilis repellat! Vel cumque neque repellat eaque excepturi provident molestias similique fugit nam at aut, odit maxime earum unde hic iste atque nihil. Dolorem doloremque perferendis a autem laboriosam ad quam optio rerum totam distinctio tempora, perspiciatis voluptates obcaecati ex ratione dolore maxime illo velit eligendi accusamus vel quisquam at! Quos voluptate tempora, laudantium nostrum dicta consequuntur voluptates suscipit. Excepturi aspernatur amet beatae voluptatibus dignissimos veniam neque animi ex saepe delectus labore distinctio error, similique quidem aliquid magni voluptas reprehenderit inventore nam? Cumque illo odio molestias eligendi soluta nobis aspernatur voluptatum? Reiciendis vitae quia itaque doloremque dicta voluptatibus, repellat sed, consectetur aspernatur ullam, enim dignissimos adipisci quas aperiam temporibus libero a repellendus est aliquam! Commodi error sequi fugiat, earum hic reiciendis impedit dolore. Iusto, voluptatibus. Dolorem ipsam culpa mollitia necessitatibus nisi consequuntur hic dolore esse. Porro inventore voluptate eligendi, id corrupti alias harum facilis modi esse dolorum deleniti, architecto eaque natus distinctio tempore veritatis perferendis. Nisi culpa, quis esse aspernatur, itaque nostrum adipisci optio et laudantium facere, cupiditate est exercitationem enim veniam sequi doloribus beatae? Quod, architecto illum! Ut eaque qui omnis facilis quae mollitia accusamus ratione temporibus totam, beatae sapiente saepe fuga eius repudiandae ad velit dolorum. Voluptas perferendis numquam dolorum, repellat consectetur dolore. Veritatis eum incidunt, deserunt debitis, hic minus voluptate accusamus recusandae dolorem est deleniti nemo? Quae velit, vel accusamus doloremque odit laborum dolore quo! Commodi itaque eaque odit laboriosam ducimus vitae earum id minus labore voluptates. Sit, dolorem officia! Inventore similique error ipsum corrupti beatae quis eius, nisi quibusdam ad hic.</h1>
+
+    <script>
+ 
+        /*
+
+        // this is first method for scroll animation
+ 
+        window.addEventListener("scroll",function(){
+            if(document.body.scrollTop > 50 || document.documentElement.scrollTop > 50){
+                document.querySelector(".container").style.left = "50%";
+            }else{
+                document.querySelector(".container").style.left = "-50%";
+            }
+
+            console.log(scrollY); // this is easy for know how many PX you scroll in this document
+        });
+
+        */
+        
+
+
+        
+        // this secound method i think this is easy then first methods
+
+        document.addEventListener("scroll",function(){
+            const scrollPX = window.scrollY; // must be use :scrollY: not use :scrollTop:
+
+                console.log(scrollPX); //this line code may help you for know how many PX you scroll in this document
+
+            if(scrollPX >= 50){
+                document.querySelector(".container").style.left = "50%";
+            }else{
+                document.querySelector(".container").style.left = "-50%";
+            }
+        });
+
+
+        
+    </script>
+</body>
+</html>

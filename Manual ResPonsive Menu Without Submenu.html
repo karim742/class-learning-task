@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://kit-pro.fontawesome.com/releases/v5.15.1/css/pro.min.css" rel="stylesheet">
+
+
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+		}
+
+		h1 {
+			text-align: center;
+			font-size: 60px;
+		}
+
+		.container {
+			width: 1140px;
+			margin: auto;
+			display: flex;
+			height: 100%;
+		}
+
+		#menuBar {
+			width: 100%;
+			height: 100px;
+			background: green;
+		}
+
+		.logoBox {
+			width: 250px;
+			height: 100%;
+			float: left;
+			margin-top: 10px;
+		}
+
+		.logoBox img {
+			width: 100%;
+		}
+
+		.mainMenu {
+			width: 900px;
+			height: auto;
+			position: relative;
+		}
+
+		.mainMenu ul {
+			list-style: none;
+			position: relative;
+			top: 30%;
+			left: 5%;
+		}
+
+		.mainMenu ul li {
+			float: left;
+			font-size: 30px;
+			margin-right: 20px;
+			padding: 10px;
+		}
+
+		.mainMenu ul li a {
+			text-decoration: none;
+			color: white;
+			transition: 1s;
+			-webkit-transition: 1s;
+			-moz-transition: 1s;
+			-ms-transition: 1s;
+			-o-transition: 1s;
+		}
+
+		.mainMenu ul li a:hover {
+			text-decoration: underline;
+		}
+
+		.menubaricon {
+			display: none;
+		}
+
+
+		@media (max-width:768px) {
+			* {
+				margin: 0;
+				padding: 0;
+			}
+
+			body {
+				overflow-x: hidden;
+			}
+
+			h1 {
+				text-align: center;
+				font-size: 40px;
+			}
+
+			.container {
+				width: 100vw;
+				margin: auto;
+				display: flex;
+				height: 100%;
+				position: relative;
+			}
+
+			#menuBar {
+				width: 100vw;
+				height: auto;
+				background: green;
+			}
+
+			.logoBox {
+				width: 50%;
+				height: 100%;
+				float: left;
+				margin-top: 10px;
+			}
+
+			.logoBox img {
+				width: 100%;
+			}
+
+			.mainMenu {
+				width: 50%;
+				height: auto;
+				position: absolute;
+				float: left;
+			}
+
+			.mainMenu ul {
+				list-style: none;
+				position: relative;
+				top: 90px;
+				left: 180px;
+				width: 310px;
+				height: 400px;
+				background: grey;
+				transition: 1s;
+				transition-timing-function: cubic-bezier(0.2, 0, 0, 0.99);
+				transform: scaleY(0);
+				transform-origin: top;
+				-webkit-transform: scaleY(0);
+				-moz-transform: scaleY(0);
+				-ms-transform: scaleY(0);
+				-o-transform: scaleY(0);
+			}
+
+			.mainMenu ul li {
+				/* float: left; */
+				font-size: 30px;
+				/* margin-right: 20px; */
+				/* padding: 10px; */
+				width: 100%;
+				position: relative;
+			}
+
+			.mainMenu ul li a {
+				text-decoration: none;
+				color: white;
+				transition: 0.5s;
+				-webkit-transition: 0.5s;
+				-moz-transition: 0.5s;
+				-ms-transition: 0.5s;
+				-o-transition: 0.5s;
+			}
+
+			.mainMenu ul li a:hover {
+				text-decoration: underline;
+			}
+
+			.menubaricon {
+				position: absolute;
+				display: initial;
+				font-size: 60px;
+				right: 35px;
+				top: 15px;
+				cursor: pointer;
+				width: 52px;
+				height: 66px;
+			}
+
+			.list_hide_show {
+				transform: scaleY(1) !important;
+				-webkit-transform: scaleY(1) !important;
+				-moz-transform: scaleY(1) !important;
+				-ms-transform: scaleY(1) !important;
+				-o-transform: scaleY(1) !important;
+			}
+
+			.menuFixed {
+				position: fixed;
+				top: 0px;
+			}
+
+
+
+
+
+
+
+			/* sub menu style */
+
+			#homesubmenu {
+				position: absolute;
+				top: 0px;
+				left: 0px;
+				background-color: red;
+				color: blue;
+				width: 100%;
+				height: 200px;
+				z-index: 111;
+			}
+
+
+		}
+	</style>
+
+
+	<title>Mobile Responsive Menu</title>
+</head>
+
+<body>
+	<h1>Mobile Responsive Menu</h1>
+
+	<section id="menuBar">
+		<div class="container">
+			<div class="logoBox">
+				<img src="main-logo-original.png" alt="">
+			</div>
+			<div class="menubaricon">
+				<i class="fal fa-bars"></i>
+			</div>
+			<div class="mainMenu">
+				<ul>
+					<li><a href="#">Home</a></li>
+					<li><a href="#">Contect</a></li>
+					<li><a href="#">Service</a></li>
+					<li><a href="#">Blog</a></li>
+					<li><a href="#">Gallary</a></li>
+					<li><a href="#">Colection</a></li>
+					<li><a href="#">Join</a></li>
+				</ul>
+			</div>
+		</div>
+	</section>
+
+	<section>
+		<br>
+		<h1 align="center">Some text</h1>
+		<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime aspernatur, molestias, dolorem quos ducimus
+			nesciunt sit sunt libero vitae tempora, nobis consequatur illo ea laborum! Ratione id iure odit, repellendus
+			voluptatum accusamus quam sint quas necessitatibus, ipsam est, aliquam doloremque. Velit cumque in itaque
+			vitae nihil id repellat et sequi suscipit inventore dicta labore repudiandae, magni quos quibusdam nemo
+			fuga, soluta aspernatur exercitationem nesciunt. Numquam commodi eveniet reprehenderit libero voluptatibus
+			unde architecto placeat obcaecati dolorem! Odit rerum aliquam dolorem. Minus mollitia omnis explicabo
+			incidunt ad numquam obcaecati corrupti veritatis reiciendis! Ad dolorem commodi fuga debitis rem, itaque
+			eius voluptas hic maiores? Consectetur quisquam quaerat vel et officia eaque, ut laudantium minus aliquid
+			soluta in maxime distinctio aspernatur eum aut non voluptatibus numquam voluptatem modi tempora maiores est
+			commodi. Consectetur adipisci error ut quia, fugiat quibusdam quam corporis! Architecto dignissimos ea
+			aperiam repellendus quidem temporibus laborum sit quam alias consequuntur placeat, eius aliquam voluptate
+			quos, vitae accusantium earum? Asperiores commodi deleniti excepturi? Ipsum, nobis magni sint earum iure
+			quibusdam veniam perferendis sit deleniti at omnis dicta modi, voluptas libero repellat eius laborum aliquam
+			minima. Tempore quia, consequuntur expedita nesciunt sequi non. Quae consequatur culpa sed et excepturi!
+			Odio quibusdam eveniet, magnam minus voluptatem obcaecati temporibus? Reiciendis molestias autem ullam
+			impedit, minus rerum, fugit ipsam, nemo ducimus blanditiis placeat obcaecati illum dolore deserunt. Qui ab
+			debitis ullam voluptatum consequatur fugit, aliquid, quod, dolorum minima nesciunt porro. Quos inventore
+			magnam, quidem labore, nemo esse reprehenderit minus vitae voluptate voluptas a quibusdam accusamus amet
+			error modi tempora neque. Distinctio obcaecati vero corporis maxime repudiandae reiciendis tenetur
+			consectetur non reprehenderit cumque nisi explicabo, porro debitis minus quos est, sunt doloremque quasi a?
+			Architecto fugiat illum nostrum facilis commodi sit officiis voluptates voluptatum velit temporibus id
+			numquam aut esse, iure dolor quod magnam quia modi repudiandae suscipit corrupti consequatur. Labore, sed
+			repudiandae aut libero explicabo perferendis accusantium inventore eveniet iste ullam minima quibusdam sit
+			at necessitatibus nihil nisi vero quos facilis omnis molestias quia culpa itaque! Rerum quidem veniam
+			impedit distinctio ipsam quis corrupti quas labore tempore vero consequatur nostrum, aperiam illo? Deserunt
+			hic sint quo atque unde consequatur maiores fuga laborum obcaecati delectus eos repudiandae quidem, id nemo
+			ratione aperiam perferendis quam sed, commodi facilis exercitationem dicta excepturi voluptate. Optio saepe
+			atque quae veniam pariatur fuga, officiis at nihil. Laborum beatae dolorum alias ab earum nisi neque qui,
+			fugit consequuntur libero expedita repellendus labore similique reprehenderit dolore iure quia tenetur
+			minus? Possimus et vel, doloribus iste laboriosam adipisci, temporibus facere reprehenderit est qui sunt
+			officia. A voluptatibus, quos adipisci quaerat aut veniam quas distinctio aliquam, expedita ex totam.
+			Dolore, quos, inventore magni fuga, consectetur officia vero omnis sit asperiores quibusdam officiis
+			reiciendis ipsa deleniti dolor quas. Veritatis aliquid doloribus voluptatum. Eaque expedita sapiente
+			deleniti unde adipisci? Rem, cum. Voluptatem temporibus laudantium adipisci, provident distinctio iusto cum
+			eius itaque? Ratione aut similique qui! Dignissimos cumque dolore itaque facere distinctio amet asperiores
+			iste nisi minus nesciunt dolorum necessitatibus esse, autem deserunt quidem quaerat eligendi ducimus neque
+			doloribus in porro eius? Sed fugiat dolores id ea, exercitationem vel saepe, iusto tempora dolore
+			necessitatibus consequuntur porro aspernatur eos nam molestiae laboriosam quia optio sequi voluptas?
+			Repudiandae commodi tempore neque laborum dicta nisi quis, qui vel atque earum deleniti porro quaerat
+			suscipit rerum reiciendis. Architecto ut eligendi, voluptate hic tempora laborum sed impedit eaque delectus
+			error rerum? Amet cumque perferendis, error id blanditiis repellat porro nemo qui tenetur possimus iste.
+			Cupiditate, necessitatibus veritatis commodi rerum tempora aliquam optio ullam quam incidunt voluptatem
+			adipisci reiciendis laudantium nesciunt consectetur aperiam culpa. Minima nostrum eaque necessitatibus
+			perferendis dolorum sunt in deserunt voluptatem illo harum corporis sapiente dolorem quia quae doloremque
+			iure blanditiis, beatae commodi magnam nihil fuga repellat perspiciatis delectus unde? Incidunt officiis
+			praesentium itaque iste. Ut ipsa quod ipsum officiis illo, omnis ab rerum quis adipisci veniam quo eveniet
+			exercitationem repudiandae, natus ad laboriosam aliquam? Pariatur cupiditate ullam tenetur saepe
+			voluptatibus eaque aliquid, ratione maxime quasi totam enim quis quibusdam magni culpa nesciunt adipisci
+			consequuntur, laborum quaerat. Architecto dolorem magnam ea maxime saepe soluta perspiciatis exercitationem
+			natus cupiditate est vel eligendi, ullam quaerat voluptatibus voluptate molestias quod cum voluptatum dicta
+			eveniet possimus earum voluptas ducimus tenetur! Sit rem dicta veritatis nisi, maxime earum sed atque neque,
+			facilis quos omnis nesciunt quae at expedita. Numquam in quibusdam sunt quasi dolores et consequatur
+			aliquam, ea a, reprehenderit, ipsa optio. Hic provident voluptate id reiciendis ipsa dicta aperiam beatae
+			ducimus voluptatibus doloribus quaerat rem, tempore ipsam inventore, odio quod expedita numquam officiis
+			autem voluptatem consequuntur fugit rerum harum culpa. Quam ipsam enim officiis possimus modi ducimus ab,
+			quos quibusdam veritatis, quis eius exercitationem ad rerum, fuga dolor quidem. Nihil quod sapiente labore
+			facilis praesentium officiis beatae? Placeat facere illo consequatur laudantium sunt quod quibusdam vitae
+			ratione nihil, atque maxime. Veniam asperiores ullam iste quibusdam, neque incidunt accusantium voluptatibus
+			molestiae veritatis earum corporis iure placeat doloribus libero quia reiciendis nam aliquid, vero eos animi
+			quis? Voluptatibus hic temporibus adipisci dolorem asperiores? Maxime unde ad cupiditate. Veritatis
+			similique est vel error quia modi tempore quos repellendus, tempora neque harum perspiciatis doloribus cum
+			consequuntur atque, hic laudantium! Doloribus quibusdam accusamus rerum voluptatem tempore sapiente
+			accusantium, nam maxime tenetur nemo nobis molestias nihil dolorem ipsam reprehenderit voluptatibus,
+			praesentium enim ratione quasi saepe incidunt nesciunt voluptates repellendus. Corporis aliquam explicabo
+			vitae. Vitae provident quisquam perspiciatis praesentium adipisci aliquid asperiores tenetur nesciunt ut, in
+			odio est obcaecati blanditiis deleniti ad cumque suscipit! Corporis culpa quia libero porro, explicabo
+			architecto aspernatur, rem velit voluptatum eligendi facere omnis iste officia ducimus dolorem quisquam
+			numquam dolore illum odit dignissimos error exercitationem! Ab repellat sit explicabo voluptate voluptatum,
+			at consequuntur aperiam consectetur voluptatibus provident tenetur. Magni cumque, totam fugiat quos fugit
+			harum quidem! Et illo recusandae eveniet dignissimos repudiandae, voluptates ratione dolor quasi, temporibus
+			dolorem labore minima, reprehenderit ex adipisci possimus? Odio iusto iste magni tenetur vel totam, eos quo
+			excepturi suscipit culpa asperiores possimus sint! Ex labore distinctio maxime, eos, minus aliquam corrupti
+			dolor quis totam possimus dolorem alias dicta, dolorum eum! Amet, molestias.</p>
+	</section>
+
+
+
+	<script>
+		let icon = document.querySelector('.menubaricon');
+
+		let menu = document.querySelector('.mainMenu ul');
+
+		icon.addEventListener('click', function () {
+			menu.classList.toggle("list_hide_show");
+		});
+
+		menu.addEventListener('focusout', function () {
+			menu.classList.remove("list_hide_show");
+		})
+
+
+		let menuSelection = document.querySelector('#menuBar');
+
+		document.addEventListener('scroll', function () {
+			if (document.body.scrollTop >= 47 || document.documentElement.scrollTop >= 47) {
+				menuSelection.classList.add('menuFixed');
+			} else {
+				menuSelection.classList.remove('menuFixed');
+			}
+		});
+	</script>
+</body>
+
+</html>

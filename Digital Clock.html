@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Clock</title>
+    <!-- <link rel="stylesheet" href="style.css"> -->
+</head>
+
+<body>
+
+
+    <!-- <div class="main_container"> -->
+        <div class="container" style="font-size: 280px;">
+            
+        </div>
+    <!-- </div> -->
+
+
+    <script>
+        function currentTime() {
+            const timer = document.querySelector(".container")
+
+            let zone = "AM";
+
+            let allTime = new Date()
+
+            let hour = allTime.getHours()
+            let minute = allTime.getMinutes()
+            let second = allTime.getSeconds()
+
+            if(hour === 0){
+                hour = 12;
+            }
+
+            if(hour > 12){
+                hour = hour - 12;
+                zone = "PM";
+            }
+
+            hour = hour < 10 ? "0" + hour:hour;
+            minute = minute < 10 ? "0" + minute:minute;
+            second = second < 10 ? "0" + second:second;
+
+            timer.innerHTML = `${hour} : ${minute} : ${second}  ${zone}`;
+
+            setInterval(currentTime,1000)
+
+        }
+
+        currentTime()
+
+    </script>
+</body>
+
+</html>

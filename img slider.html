@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Slider</title>
+		<link href="https://kit-pro.fontawesome.com/releases/v5.15.1/css/pro.min.css" rel="stylesheet"/>
+		<link rel="stylesheet" href="Fontawesome_file/all.min.css">
+		<link rel="stylesheet" href="Fontawesome_file/fontawesome.min.css">
+		<link rel="stylesheet" href="style.css"/>
+		
+		
+		<style>
+		
+			@import url('https://fonts.googleapis.com/css2?family=Potta+One&display=swap');
+/*font-family: 'Potta One', cursive;*/
+
+*{
+	margin: 0px;
+	padding: 0px;
+
+}
+html {
+  scroll-behavior: smooth;
+}
+.main_box{
+	width: 100%;
+	height: 100%;
+	display: grid;
+	place-items: center;
+}
+button{
+	width:100px;
+	height: 40px;
+	margin: 0px 10px;
+}
+.container{
+	width: 80%;
+	margin: auto;
+	background: red;
+	display: flex;
+	justify-content: center;
+	    align-items: center;
+}
+.allimgwrapper{
+	display: grid;
+	place-items: center;
+	width: 300px;
+	height: 300px;
+}
+.allimgwrapper img{
+	width: 100%;
+	height: 100%;
+	
+}
+
+		
+		
+		</style>
+		
+		
+	</head>
+
+	<body>
+	
+	<div class="main_box">
+		<div class="container">
+			<button type="button" onclick="pre()">Previous</button>
+				<div class="allimgwrapper">
+					<img src="speaker-1.jpg"/>
+				</div>
+			<button type="button" onclick="next()">Next</button>
+		</div>
+	</div>
+		<script type="text/javascript">
+		
+			var photos = ["speaker-1.jpg","speaker-2.jpg","speaker-3.jpg","speaker-4.jpg","speaker-5.jpg","speaker-6.jpg","speaker-7.jpg","speaker-8.jpg"];
+var imgTag = document.querySelector("img");
+
+var count = 0;
+
+function next(){
+	++count;
+	
+	if(count >= photos.length){
+		count = 0;
+		
+		imgTag.setAttribute('src', photos[count] );
+	}else{
+		imgTag.setAttribute('src', photos[count] );
+	}
+	
+}
+
+function pre(){
+	--count;
+	
+	if(count < 0){
+		count = photos.length - 1;
+		
+		imgTag.setAttribute('src', photos[count] );
+	}else{
+		imgTag.setAttribute('src', photos[count] );
+	}
+}
+
+
+
+
+		$('.fade').slick({
+  dots: true,
+  infinite: true,
+  speed: 500,
+  fade: true,
+  cssEase: 'linear'
+});
+	
+
+
+		
+		</script>
+	</body>
+
+
+</html>

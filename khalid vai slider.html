@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slider with circle click button</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+
+        .container {
+            width: 50vw;
+            margin: auto;
+        }
+
+        .sliderImg {
+            width: 630px;
+            height: 360px;
+            position: relative;
+        }
+
+        .sliderImg img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .allButton {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 100%;
+            transform: translate(-50%, -50%);
+			display: flex;
+			justify-content: space-between;
+        }
+
+        .allButton button {
+            border: none;
+            padding: 5px;
+            outline: none;
+            cursor: pointer;
+        }
+
+        .allButton button:active {
+            background: #b3acac;
+            outline: none;
+            border: none;
+        }
+
+        .circleButton {
+            position: absolute;
+            bottom: 0%;
+            left: 50%;
+            transform: translateX(-50%);
+            width: fit-content;
+            height: auto;
+        }
+
+        span.circle {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border: 2px solid #00ff14;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+
+        span.circle:active {
+            background: #00ff14;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="sliderImg">
+            <img id="image" src="BG PIC/1.jpg">
+
+
+            <div class="allButton">
+                <button type="button" id="prev">Previous</button>
+                <button type="button" id="next">Forward</button>
+            </div>
+
+            <div class="circleButton">
+                <span class="circle" id="circle1"></span>
+                <span class="circle" id="circle2"></span>
+                <span class="circle" id="circle3"></span>
+                <span class="circle" id="circle4"></span>
+                <span class="circle" id="circle5"></span>
+                <span class="circle" id="circle6"></span>
+                <span class="circle" id="circle7"></span>
+                <span class="circle" id="circle8"></span>
+                <span class="circle" id="circle9"></span>
+                <span class="circle" id="circle10"></span>
+                <span class="circle" id="circle11"></span>
+            </div>
+
+        </div>
+    </div>
+
+
+    <script>
+        const allImageSrc = ["BG PIC/1.jpg", "BG PIC/2.jpg", "BG PIC/3.jpg", "BG PIC/4.jpg", "BG PIC/5.jpg",
+            "BG PIC/6.jpg", "BG PIC/7.jpg", "BG PIC/8.jpg", "BG PIC/9.jpg", "BG PIC/10.jpg", "BG PIC/11.jpg",
+        ];
+        const imgTag = document.querySelector("#image");
+
+        const nextBtn = document.querySelector("#next");
+        const prevBtn = document.querySelector("#prev");
+
+        let counter = 0;
+
+        nextBtn.addEventListener("click", function () {
+            ++counter;
+            if (counter >= allImageSrc.length) {
+
+                counter = 0;
+                imgTag.setAttribute("src", allImageSrc[counter]);
+            } else {
+                imgTag.setAttribute("src", allImageSrc[counter]);
+            }
+        });
+
+        prevBtn.addEventListener("click", function () {
+            --counter;
+
+            if (counter < 0) {
+                counter = allImageSrc.length - 1;
+                imgTag.setAttribute("src", allImageSrc[counter]);
+            } else {
+                imgTag.setAttribute("src", allImageSrc[counter]);
+            }
+        });
+
+
+
+
+
+
+
+        const circleOne = document.querySelector("#circle1");
+        const circleTwo = document.querySelector("#circle2");
+        const circleThree = document.querySelector("#circle3");
+        const circleFour = document.querySelector("#circle4");
+        const circleFive = document.querySelector("#circle5");
+        const circleSix = document.querySelector("#circle6");
+        const circleSeven = document.querySelector("#circle7");
+        const circleEight = document.querySelector("#circle8");
+        const circleNine = document.querySelector("#circle9");
+        const circleTen = document.querySelector("#circle10");
+        const circleEleven = document.querySelector("#circle11");
+
+        circleOne.addEventListener("click", () => {
+            imgTag.setAttribute("src", allImageSrc[0]);
+            counter = 0;
+        });
+
+        circleTwo.addEventListener("click", () => {
+            imgTag.setAttribute("src", allImageSrc[1]);
+            counter = 1;
+        });
+
+        circleThree.addEventListener("click", () => {
+            imgTag.setAttribute("src", allImageSrc[2]);
+            counter = 2;
+
+        });
+
+        circleFour.addEventListener("click", () => {
+            imgTag.setAttribute("src", allImageSrc[3]);
+            counter = 3;
+        });
+
+        circleFive.addEventListener("click", () => {
+            imgTag.setAttribute("src", allImageSrc[4]);
+            counter = 4;
+        });
+
+        circleSix.addEventListener("click", () => {
+            imgTag.setAttribute("src", allImageSrc[5]);
+            counter = 5;
+        });
+
+        circleSeven.addEventListener("click", () => {
+            imgTag.setAttribute("src", allImageSrc[6]);
+            counter = 6;
+        });
+
+        circleEight.addEventListener("click", () => {
+            imgTag.setAttribute("src", allImageSrc[7]);
+            counter = 7;
+        });
+
+        circleNine.addEventListener("click", () => {
+            imgTag.setAttribute("src", allImageSrc[8]);
+            counter = 8;
+        });
+
+        circleTen.addEventListener("click", () => {
+            imgTag.setAttribute("src", allImageSrc[9]);
+            counter = 9;
+        });
+
+        circleEleven.addEventListener("click", () => {
+            imgTag.setAttribute("src", allImageSrc[10]);
+            counter = 10;
+        });
+    </script>
+</body>
+
+</html>

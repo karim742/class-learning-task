@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="Fontawesome_file/fontawesome.min.css">
+    <link rel="stylesheet" href="Fontawesome_file/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+        
+         ::placeholder {
+            color: rgb(71, 71, 71);
+        }
+        
+        .container {
+            width: fit-content;
+            height: auto;
+            position: absolute;
+            top: 10%;
+            left: 50%;
+            transform: translate(-50%, -10%);
+            display: grid;
+            place-items: center;
+        }
+        
+        table {
+            border-collapse: collapse;
+            border-color: white;
+            color: white;
+            padding-top: 0;
+            font-family: arial;
+            font-size: 20px;
+        }
+        
+        table thead tr td {
+            padding: 10px 10px 10px 10px;
+        }
+        
+        table tbody tr td {
+            padding: 10px 10px 10px 10px;
+        }
+        
+        button {
+            border: none;
+            outline: none;
+            padding: 5px;
+            background: rgb(43, 21, 238);
+            color: white;
+            border-radius: 2px;
+            cursor: pointer;
+        }
+        
+        button:last-child {
+            background: tomato;
+            margin-left: 5px;
+        }
+        
+        input {
+            background: none;
+            border: none;
+            outline: none;
+            padding: 10px;
+            font-size: 20px;
+            border-radius: 3px;
+            width: 94%;
+        }
+        
+        #addBtn {
+            border: none;
+            outline: none;
+            padding: 10px;
+            background: rgb(66, 51, 204);
+            color: white;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 40px;
+            transition: 0.1s;
+            width: 92%;
+            height: 60px;
+        }
+        
+        #addBtn:active {
+            background: rgb(13, 0, 129);
+            width: 95%;
+        }
+        
+        button:last-child:active {
+            background: #ff2700;
+        }
+        
+        button#editBtn:active {
+            background: #0f0092;
+        }
+        
+        input#titleInput {
+            width: 100px;
+        }
+        
+        span#emptyMessage {
+            font-size: 30px;
+            color: white;
+            font-family: cursive;
+            font-style: italic;
+            padding: 10px 0px 20px 0px;
+        }
+        
+        button#cencel {
+            border: none;
+            outline: none;
+            padding: 10px;
+            font-size: 30px;
+            background: #7a7a00;
+            color: white;
+            border-radius: 2px;
+            cursor: pointer;
+            box-shadow: 3px -3px 0px 0px grey;
+            transition: 0.4s;
+            width: 50%;
+        }
+        
+        button#update {
+            border: none;
+            outline: none;
+            padding: 10px;
+            font-size: 30px;
+            background: #3232e5;
+            color: white;
+            border-radius: 2px;
+            cursor: pointer;
+            box-shadow: 3px -3px 0px 0px grey;
+            transition: 0.3s;
+            width: 50%;
+        }
+        
+        .editTool {
+            width: 95%;
+            margin: auto;
+            padding: 10px;
+            display: flex;
+        }
+        
+        button#cencel:active {
+            background: #ffc107;
+            box-shadow: none;
+        }
+        
+        button#update:active {
+            box-shadow: none;
+            background: #000072;
+        }
+        
+        #headerRow {
+            color: rgb(2, 177, 2);
+            font-size: 30px;
+            font-style: bold;
+        }
+    </style>
+</head>
+
+<body style="background-color: brown;">
+
+
+
+    <div class="container">
+
+        <h1 style="font-size: 70px;word-spacing: 0.5in;">To Do List</h1>
+
+        <span id="emptyMessage"></span>
+
+        <table border="1">
+            <thead>
+                <tr id="headerRow">
+                    <td style="width: 10px;">#</td>
+                    <td>Title</td>
+                    <td>Description</td>
+                    <td style="width: 95px;">Action</td>
+                </tr>
+            </thead>
+            <tbody id="tablebody">
+
+
+
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td><input type="text" id="titleInput" placeholder="Title"></td>
+                    <td colspan="2"><input type="text" id="descriptionInput" placeholder="Description"></td>
+                    <td><button type="button" id="addBtn">Add</button></td>
+                </tr>
+                <tr id="edittoolsRow" style="display: none;">
+                    <td colspan="4">
+                        <div class="editTool">
+                            <button id="cencel">Cencel</button>
+                            <!-- for identify which todo i click so that we will add edited data -->
+                            <input type="hidden" value="" id="arrayIndex">
+                            <button id="update">Update</button>
+                        </div>
+                    </td>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+
+    <script src="apps.js"></script>
+    <script>
+        const todoTitle = document.querySelector("#titleInput");
+        const todoDescription = document.querySelector("#descriptionInput");
+        const addButton = document.querySelector("#addBtn");
+        const tableBody = document.querySelector("tbody");
+        const editButton = document.querySelector("#editBtn");
+        const deleteButton = document.querySelector("#deleteBtn");
+
+        // there is no todo empty function
+        function emptyTodo() {
+            //if there is no todo then hide thead and show empty message
+
+            const spanTag = document.querySelector("#emptyMessage");
+            let currentItem = JSON.parse(localStorage.getItem("todos"));
+            if (currentItem.length === 0) {
+                document.querySelector("table thead tr").style.display = "none";
+                spanTag.innerHTML = "There is No To Do !";
+            } else {
+                document.querySelector("table thead tr").removeAttribute("style");
+                spanTag.innerHTML = "";
+            }
+        }
+        emptyTodo();
+
+        // firstly chack is present any data in LS...if not true add [] array
+
+        if (!localStorage.getItem("todos")) {
+            let makeStorgae = localStorage.setItem("todos", JSON.stringify(new Array()))
+        }
+
+
+        // addButton event and function
+        addButton.addEventListener("click", function() {
+            // firstly check is input box empty?
+            if ((todoTitle.value.trim() === "") || (todoDescription.value.trim() === "")) {
+                alert("You must fill all input box !");
+            }
+            // else if ((todoTitle.value.trim().length > 30) || (todoDescription.value.trim() > 60)) {
+            //     alert("You can add title and discription between (30-60) wards")
+            // } 
+            else {
+
+                // this code is add user data in local Storage
+
+                let currentItem = JSON.parse(localStorage.getItem("todos"));
+
+                currentItem.push({
+                    title: todoTitle.value,
+                    desc: todoDescription.value
+                });
+
+                let makeString = JSON.stringify(currentItem);
+
+                localStorage.setItem("todos", makeString);
+
+
+
+                // after click add automatically clear input boxes
+                todoTitle.value = '';
+                todoDescription.value = '';
+            }
+            //after click add update table with new lS data.....
+            updateTable();
+        });
+
+
+        function updateTable() {
+            let currentItem = JSON.parse(localStorage.getItem("todos"));
+            tableBody.innerHTML = '';
+            let i = 1;
+
+            currentItem.forEach((item, index) => {
+                tableBody.innerHTML += `
+    
+                    <tr data-itemID="${index}" id="singleTodo">
+                    <td>${i}</td>
+                    <td>${item.title}</td>
+                    <td>${item.desc}</td>
+                    <td>
+                        <button id="editBtn">Edit</button>
+                        <button id="deleteBtn">Delete</button>
+                    </td>
+                </tr>
+                    
+            `;
+                i++;
+            });
+
+            deleteTR();
+            editTodo();
+            updateEdited();
+
+        }
+        // whien first time reload the page if any data in lS.. fot that exsucated updatetable function simpley
+        updateTable();
+
+
+        // delete function
+        function deleteTR() {
+            // select all single todo or table row
+            const singleTodos = document.querySelectorAll("#singleTodo");
+
+            singleTodos.forEach((singleTodo) => {
+                singleTodo.querySelector("#deleteBtn").addEventListener("click", function() {
+                    let currentItem = JSON.parse(localStorage.getItem("todos"));
+                    //clicked tr index number genarate
+                    let clicked_index = Number(singleTodo.getAttribute("data-itemID"));
+                    //after click delete btn then new array without clicked tr
+                    let currentNew_Item = currentItem.filter((item, index) => {
+                        return index !== clicked_index;
+                    });
+                    localStorage.clear();
+                    localStorage.setItem("todos", JSON.stringify(currentNew_Item));
+                    updateTable();
+                });
+            });
+            emptyTodo();
+        }
+        deleteTR();
+
+
+        // edit button function
+
+        function editTodo() {
+            // select all single todo or table row
+            const singleTodos = document.querySelectorAll("#singleTodo");
+
+            singleTodos.forEach((singleTodo) => {
+                singleTodo.querySelector("#editBtn").addEventListener("click", function() {
+                    let currentItem = JSON.parse(localStorage.getItem("todos"));
+                    //clicked tr index number genarate
+                    let clicked_index = Number(singleTodo.getAttribute("data-itemID"));
+
+                    todoTitle.value = currentItem[clicked_index].title;
+                    todoDescription.value = currentItem[clicked_index].desc;
+
+                    //after click edit btn then show edit tools....
+                    document.querySelector("#edittoolsRow").style.display = '';
+
+                    //  for identify which todo i click so that we will add edited data
+                    // this code for updateEdit funtion
+                    document.querySelector("#arrayIndex").value = clicked_index;
+
+                });
+            });
+        }
+        editTodo();
+
+        // cencel button function 
+
+        function cencelEdit_tools() {
+
+            const cencelBtn = document.querySelector("#cencel");
+
+            cencelBtn.addEventListener("click", function() {
+                //after click cencel btn then clear edit input boxes...
+                todoTitle.value = '';
+                todoDescription.value = '';
+                //after click cencel btn then hide edit tools....
+                document.querySelector("#edittoolsRow").style.display = 'none';
+            });
+        }
+        cencelEdit_tools();
+
+        // upadate button function -- update with edited data
+
+        function updateEdited() {
+
+            document.querySelector("#update").addEventListener("click", function() {
+
+                let currentItem = JSON.parse(localStorage.getItem("todos"));
+                let clicked_index = Number(document.querySelector("#arrayIndex").value);
+
+                let editObj = {
+                    title: todoTitle.value,
+                    desc: todoDescription.value
+                }
+
+                currentItem[clicked_index] = editObj;
+
+                localStorage.clear();
+                localStorage.setItem("todos", JSON.stringify(currentItem));
+
+                updateTable();
+
+
+            });
+
+
+        }
+        updateEdited();
+    </script>
+</body>
+
+</html>

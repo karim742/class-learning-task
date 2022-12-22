@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #parent_div {
+            position: relative;
+            height: 100px;
+            width: 100px;
+        }
+
+        #background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: red;
+            filter: blur(3px);
+            z-index: -1;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="temptext">
+        <h1>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rerum delectus dolorum consectetur soluta repellendus velit voluptatem! Hic provident delectus nihil sint saepe ab debitis quidem! Iste consequatur laborum sunt, doloribus totam, labore beatae vero quidem non consequuntur repellendus et dolor praesentium aspernatur sint esse deleniti dolorem commodi. Eum provident laborum eligendi recusandae ab obcaecati perferendis voluptates, eveniet mollitia, iusto incidunt! Enim deserunt quas in temporibus nemo explicabo! Neque adipisci animi laboriosam distinctio quae corrupti sapiente fugit corporis optio ullam repudiandae non omnis quo nulla eligendi facere dicta iure incidunt temporibus, hic natus quod cum. Sint saepe, tenetur, velit alias voluptatem tempora nostrum adipisci consequuntur aliquam atque eos sapiente obcaecati modi doloremque eius cum qui nesciunt voluptates perspiciatis, vero voluptatibus. Eveniet quam, optio cupiditate nisi adipisci rem libero inventore labore aspernatur ducimus quibusdam dolorum nobis ea neque consequatur officiis facere laborum! Ratione explicabo modi officia cum distinctio laudantium architecto! Eum, voluptatibus.</h1>
+    </div>
+
+    <div id="parent_div">
+        <div id="background"></div>
+        <div id="textarea">My Text</div>
+    </div>
+</body>
+
+</html>

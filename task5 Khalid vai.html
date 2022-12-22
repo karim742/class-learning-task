@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 5</title>
+    <link rel="stylesheet" href="Fontawesome_file/all.min.css">
+    <link rel="stylesheet" href="Fontawesome_file/fontawesome.min.css">
+    
+	<style>
+	
+		*{
+    margin: 0px;
+    padding: 0px;
+
+}
+section#Header {
+    width: 100%;
+    height: 85px;
+}
+
+.header_div {
+    width: 100%;
+    height: 85px;
+}
+
+.container {
+    width: 88%;
+    height: auto;
+    margin: auto;
+}
+
+.header_logo {
+    width: fit-content;
+    height: 85px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    float: left;
+}
+
+.header_logo h3 {
+    font-size: 30px;
+    margin-left: 10px;
+}
+
+.header_logo h1 {
+    padding: 13px;
+    border-radius: 50%;
+    width: 46px;
+    height: 50px;
+    display: grid;
+    place-items: center;
+    background: tomato;
+    font-size: 50px;
+}
+.mainmenu {
+    width: fit-content;
+    height: 85px;
+    float: left;
+    display: grid;
+    place-items: center;
+}
+
+.mainmenu ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 160px;
+}
+
+.mainmenu ul li {
+    margin-right: 30px;
+}
+
+.mainmenu ul li a {
+    text-decoration: none;
+    font-family: system-ui;
+    color: black;
+    font-size: 20px;
+}
+.header_btn {
+    width: fit-content;
+    height: 85px;
+    display: grid;
+    place-items: center;
+}
+
+.header_btn a {
+    text-decoration: none;
+    color: white;
+    background: #447265;
+    font-family: system-ui;
+    font-size: 20px;
+    padding: 12px;
+    border-radius: 10px;
+    width: 120px;
+    height: 34px;
+    display: grid;
+    place-items: center;
+    vertical-align: middle;
+    transition: 0.4s;
+}
+.mainmenu ul li a:hover {
+    text-decoration: underline;
+}
+
+.header_btn a:hover {
+    color: #000000;
+    background: #5e9b8a;
+}
+section#Main_Title {
+    width: 100%;
+    height: 250px;
+}
+
+.main_title {
+    width: 100%;
+    height: 250px;
+}
+
+.main_title_box {
+    width: 670px;
+    margin: auto;
+    text-align: center;
+    transform: translateY(60px);
+}
+
+.main_title_box h1 {
+    font-size: 45px;
+}
+
+.main_title_box p {
+    font-size: 15px;
+    width: 490px;
+    margin: 25px 0px 0px 95px;
+    color: grey;
+    font-family: system-ui;
+}
+section.Service {
+    width: 100%;
+    height: 800px;
+}
+
+.room_service {
+    width: 100%;
+    height: 800px;
+    background: #f3f3f3;
+}
+
+.room_service_main_img {
+    width: 100%;
+    height: 540px;
+    margin-top: 50px;
+    position: relative;
+}
+
+.room_service_main_img img {
+    width: 100%;
+    height: 100%;
+    background-size: 100% 100%;
+    border-radius: 30px;
+    box-shadow: 0px 13px 17px -20px #404040, 0px 15px 15px -10px #000000eb;
+}
+
+.room_service_center {
+    position: absolute;
+    top: 805px;
+    background: white;
+    width: 72%;
+    height: 160px;
+    padding: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 30px;
+    box-shadow: 0px 13px 17px -20px #404040, 0px 15px 15px -10px #00000099;
+}
+.room_service_center_title {
+    width: fit-content;
+}
+
+
+.room_service_center_title h2 {
+    font-size: 40px;
+    font-family: sans-serif;
+    color: #15153c;
+}
+
+.room_service_center_input {
+    width: fit-content;
+    display: grid;
+    grid-auto-flow: column;
+    grid-column-gap: 23px;
+    margin-top: 30px;
+}
+
+.room_service_center_input1 {
+    display: flex;
+    flex-direction: column;
+}
+
+.room_service_center_input2 {
+    display: flex;
+    flex-direction: column;
+}
+
+.room_service_center_input3 {
+    display: flex;
+    flex-direction: column;
+}
+
+.room_service_center_input1 select {
+    width: 250px;
+    padding: 25px 0px 20px 20px;
+    border: 1px solid #80808045;
+    border-radius: 10px;
+    position: relative;
+    outline: none;
+    background: #e9e9e938;
+    font-weight: 900;
+    cursor: pointer;
+}
+
+.room_service_center_input1 span {
+    position: absolute;
+    z-index: 11;
+    padding-left: 24px;
+    font-family: monospace;
+    font-size: 16px;
+    top: 120px;
+}
+
+.room_service_center_input2 span {
+    position: absolute;
+    z-index: 11;
+    padding-left: 24px;
+    font-family: monospace;
+    font-size: 16px;
+    top: 120px;
+}
+
+.room_service_center_input2 select {
+    width: 250px;
+    padding: 25px 0px 20px 20px;
+    border: 1px solid #80808045;
+    border-radius: 10px;
+    position: relative;
+    outline: none;
+    background: #e9e9e938;
+    font-weight: 900;
+    cursor: pointer;
+}
+
+.room_service_center_input3 input {
+    width: 250px;
+    padding: 25px 0px 20px 20px;
+    border: 1px solid #80808045;
+    border-radius: 10px;
+    position: relative;
+    outline: none;
+    background: #e9e9e938;
+    font-weight: 900;
+    cursor: pointer;
+}
+
+.room_service_center_input3 span {
+    position: absolute;
+    z-index: 11;
+    padding-left: 24px;
+    font-family: monospace;
+    font-size: 16px;
+    top: 120px;
+}
+.room_service_center_scarch_btn i {
+    background: green;
+    width: 67px;
+    height: 67px;
+    display: grid;
+    place-items: center;
+    font-size: 30px;
+    color: white;
+    border-radius: 9px;
+    transition: 0.4s;
+}
+.room_service_center_scarch_btn:hover i {
+    background: #00b300;
+    color: #29294a;
+}
+.room_service_center_scarch_btn a {
+    text-decoration: none;
+}
+.best_feature_gellary_img {
+    width: 300px;
+    height: 330px;
+}
+
+.best_feature_gellary_img img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px 10px 0px 0px;
+}
+
+.best_feature_top_title {
+    width: 950px;
+    height: 100px;
+}
+
+.best_feature_top_title h1 {
+    color: #232346;
+    font-size: 40px;
+}
+
+.best_feature_top_title p {
+    color: grey;
+    font-family: system-ui;
+    font-size: 15px;
+    margin-top: 15px;
+}
+
+.best_feature_top_wrapper {
+    width: 100%;
+    height: 100px;
+    display: grid;
+    grid-auto-flow: column;
+    grid-column-gap: 0px;
+    margin-top: 30px;
+}
+
+.best_feature_slider_direction {
+    height: 100px;
+    display: inline-grid;
+    place-items: center;
+    grid-auto-flow: column;
+}
+.best_feature_slider_direction span#left_arrow {
+    background: green;
+    width: 35px;
+    height: 35px;
+    display: grid;
+    place-items: center;
+    font-size: 35px;
+    padding: 15px;
+    border-radius: 50%;
+}
+
+.best_feature_slider_direction span#right_arrow {
+    background: green;
+    width: 35px;
+    height: 35px;
+    display: grid;
+    place-items: center;
+    font-size: 35px;
+    padding: 15px;
+    border-radius: 50%;
+}
+.best_feature_gellary_single_picture {
+    width: 300px;
+    height: 365px;
+    margin-top: 50px;
+    position: relative;
+}
+
+.best_feature_gellary_img_title {
+    font-family: system-ui;
+    font-size: 15px;
+    font-weight: 600;
+    text-align: center;
+    margin-top: 10px;
+}
+.best_feature_gellary_img_hover_info {
+    width: 77%;
+    height: 81%;
+    position: absolute;
+    top: 0px;
+    background: tomato;
+    border-radius: 10px;
+    padding: 35px;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.3s;
+}
+
+.best_feature_gellary_img_info_wrapper {height: 100%;border-radius: 10px;}
+
+.best_feature_gellary_img_hover_info_title h2 {
+    color: white;
+    font-size: 40px;
+    font-family: -webkit-pictograph;
+    margin-bottom: 15px;
+}
+
+.best_feature_gellary_img_hover_info_title {
+    text-align: center;
+    width: fit-content;
+    margin: auto;
+    transform: translateY(40px);
+}
+
+.best_feature_gellary_img_hover_info_title p {
+    width: 220px;
+    text-align: center;
+    margin: auto;
+    line-height: 25px;
+    color: white;
+    font-family: system-ui;
+}
+
+.best_feature_gellary_img_hover_info_btn {
+    width: 187px;
+    margin: auto;
+    margin-top: 65px;
+}
+
+.best_feature_gellary_img_hover_info_btn a {
+    color: black;
+    font-family: -webkit-body;
+    text-decoration: none;
+    background: white;
+    padding: 15px 30px 15px 30px;
+    border-radius: 30px;
+    display: grid;
+    grid-auto-flow: column;
+}
+.best_feature_gellary_img_hover_info_btn a i {
+    width: 20px;
+    height: 20px;
+    background: green;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    font-size: 10px;
+}
+.best_feature_gellary_single_picture:hover .best_feature_gellary_img_hover_info {
+    visibility: visible;
+    opacity: 1;
+    transition: 0.5;
+    -webkit-transition: 0.5;
+    -moz-transition: 0.5;
+    -ms-transition: 0.5;
+    -o-transition: 0.5;
+}
+.best_feature_gellary {
+    display: grid;
+    grid-auto-flow: column;
+    grid-column-gap: 50px;
+}
+section.Best_Feature {
+    width: 100%;
+    height: 550px;
+}
+
+.best_feature {
+    width: 100%;
+    height: 550px;
+}
+	
+	</style>
+	
+	
+</head>
+<body>
+    
+    <section id="Header">
+        <div class="header_div">
+            <div class="container">
+                <div class="header_logo">
+                    <h1>F</h1>
+                    <h3>Fredlocity</h3>
+                </div>
+                <div class="mainmenu">
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Products</a></li>
+                        <li><a href="#">Pricing</a></li>
+                        <li><a href="#">Partnership</a></li>
+                        <li><a href="#">Contect</a></li>
+                    </ul>
+                </div>
+                <div class="header_btn">
+                    <a href="#">Login</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="Main_Title">
+        <div class="main_title">
+            <div class="container">
+                <div class="main_title_box">
+                    <h1>Find Suitable Room That Fit Your Needs To Complete Your Task</h1>
+                    <p>We have asistate more than 10000 compersion to help analyze their platform in many fields from tecnology to education</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="Service">
+        <div class="room_service">
+            <div class="container">
+                <div class="room_service_main_img">
+                    <img src="dawingroom.jpg" alt="Main Dawing Room">
+                </div>
+
+                <div class="room_service_center">
+                    <div class="room_service_center_title">
+                        <h2>Find Your Room Now</h2>
+                    </div>
+                    <div class="room_service_center_input">
+
+                        <div class="room_service_center_input1">
+                            <span for="location">Location</span>
+                            <select name="location" id="location">
+                                <option value="Select Your Location">Select Your Location</option>
+                                <option value="Bangladesh">Bangladesh</option>
+                                <option value="India">India</option>
+                                <option value="America">America</option>
+                                <option value="London">London</option>
+                            </select>
+                        </div>
+
+                        <div class="room_service_center_input2">
+                            <span for="roomType">Type</span>
+                            <select name="roomType" id="room_type">
+                                <option value="Select Your Room Type">Select Your Room Type</option>
+                                <option value="Home">Home</option>
+                                <option value="Office">Office</option>
+                                <option value="Shop">Shop</option>
+                                <option value="Shopping Mall">Shopping Mall</option>
+                            </select>
+                        </div>
+
+                        <div class="room_service_center_input3">
+                            <span for="date">Date</span>
+                            <input name="date" type="date" value="00/00/0000"/>
+                        </div>
+
+                        <div class="room_service_center_scarch_btn">
+                            <a href="#"><i class="fas fa-search"></i></a>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="Best_Feature">
+        <div class="best_feature">
+            <div class="container">
+                <div class="best_feature_top_wrapper">
+                    <div class="best_feature_top_title">
+                        <h1>Best Feature</h1>
+                        <p>Our Sports Is Disigned to give you a diffenrent experience when working with your team or personally</p>
+                    </div>
+                    <div class="best_feature_slider_direction">
+                        <span id="left_arrow"><i class="fas fa-chevron-left"></i></span>
+                        <span id="right_arrow"><i class="fas fa-chevron-right"></i></span>
+                    </div>
+                </div>
+
+                <div class="best_feature_gellary">
+
+                    <div class="best_feature_gellary_single_picture">
+                        <div class="best_feature_gellary_img_info_wrapper">
+                            <div class="best_feature_gellary_img">
+                                <img src="office_desk_room.jpg" alt="office & desk room.jpg">
+                            </div>
+                            <div class="best_feature_gellary_img_title">
+                                <p>Office & Desk Room</p>
+                            </div>
+                        </div>
+                        <div class="best_feature_gellary_img_hover_info">
+                            <div class="best_feature_gellary_img_hover_info_title">
+                                <h2>Office & Desk Room</h2>
+                                <p>Comfortable Space.Full speed with free coffee & snack and tea more</p>
+                            </div>
+                            <div class="best_feature_gellary_img_hover_info_btn">
+                                <a href="#">Chack Quality <i class="fas fa-chevron-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="best_feature_gellary_single_picture">
+                        <div class="best_feature_gellary_img_info_wrapper">
+                            <div class="best_feature_gellary_img">
+                                <img src="office_room.jpg" alt="office_room.jpg">
+                            </div>
+                            <div class="best_feature_gellary_img_title">
+                                <p>Office Room</p>
+                            </div>
+                        </div>
+                        <div class="best_feature_gellary_img_hover_info">
+                            <div class="best_feature_gellary_img_hover_info_title">
+                                <h2>Office<br/>Room</h2>
+                                <p>Comfortable Space.Full speed with free coffee & snack and tea more</p>
+                            </div>
+                            <div class="best_feature_gellary_img_hover_info_btn">
+                                <a href="#">Chack Quality <i class="fas fa-chevron-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="best_feature_gellary_single_picture">
+                        <div class="best_feature_gellary_img_info_wrapper">
+                            <div class="best_feature_gellary_img">
+                                <img src="meeting.jpg" alt="meeting.jpg">
+                            </div>
+                            <div class="best_feature_gellary_img_title">
+                                <p>Meeting Room</p>
+                            </div>
+                        </div>
+                        <div class="best_feature_gellary_img_hover_info">
+                            <div class="best_feature_gellary_img_hover_info_title">
+                                <h2>Meeting Room</h2>
+                                <p>Comfortable Space.Full speed with free coffee & snack and tea more</p>
+                            </div>
+                            <div class="best_feature_gellary_img_hover_info_btn">
+                                <a href="#">Chack Quality <i class="fas fa-chevron-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+</body>
+</html>

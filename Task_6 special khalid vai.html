@@ -1,0 +1,1039 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Khalid Vai Speacial Task</title>
+    <link rel="stylesheet" href="Fontawesome_file/all.min.css">
+    <link rel="stylesheet" href="Fontawesome_file/fontawesome.min.css">
+    
+	<style>
+		
+		*{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    width: 100vw;
+    height: 100vh;
+    /*background-image: url("main_background_image.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;*/
+    background-color: #1F1D2B;
+}
+section#Side_Menu {
+    width: 80px;
+    height: 100%;
+    float: left;
+}
+
+aside.side_menu {
+    width: 80px;
+    height: 100%;
+    display: grid;
+    place-items: center;
+    border-right: 1px solid grey;
+}
+
+.side_top_menu ul {
+    list-style: none;
+    border-bottom: 1px solid grey;
+}
+
+.side_top_menu ul li {
+    margin-top: 15px;
+    background: #353440;
+    width: 41px;
+    height: 40px;
+    display: grid;
+    place-items: center;
+    border-radius: 15px;
+    transition: 0.2s;
+}
+
+.side_middle_menu ul {
+    list-style: none;
+    border-bottom: 1px solid grey;
+    /* margin-top: -40px; */
+}
+
+.side_middle_menu ul li {
+    margin-top: 25px;
+}
+
+.side_middle_menu ul li:first-child {
+    margin-top: 0px;
+}
+
+.side_top_menu ul li:first-child {
+    margin-top: 0px;
+    margin-bottom: 40px;
+    background: green;
+    border-radius: 50%;
+    font-family: arial;
+    font-weight: bold;
+    font-size: 25px;
+}
+
+.side_top_menu {
+    width: 100%;
+    display: grid;
+    place-items: center;
+}
+
+.side_top_menu ul li:last-child {
+    margin-bottom: 30px;
+}
+
+.side_top_menu ul li a {
+    text-decoration: none;
+    color: gray;
+    transition: 0.2s;
+}
+.side_middle_menu {
+    width: 100%;
+    display: grid;
+    place-items: center;
+}
+
+.side_middle_menu ul li:last-child {
+    margin-bottom: 30px;
+}
+
+.side_middle_menu ul li {
+    margin-top: 15px;
+    background: #353440;
+    width: 41px;
+    height: 40px;
+    display: grid;
+    place-items: center;
+    border-radius: 15px;
+    transition: 0.2s;
+}
+
+.side_middle_menu ul li a {
+    color: gray;
+    transition: 0.2s;
+    text-decoration: none;
+}
+
+.side_last_menu {
+    width: 100%;
+    display: grid;
+    place-items: center;
+}
+
+.side_last_menu ul {
+    list-style: none;
+    /* margin-top: -44px; */
+}
+
+.side_last_menu ul li {
+    background: #353440;
+    width: 41px;
+    height: 40px;
+    display: grid;
+    place-items: center;
+    border-radius: 15px;
+    transition: 0.2s;
+}
+.side_top_menu ul li:first-child a{
+    color: white;
+}
+
+.side_last_menu ul li a {
+    color: gray;
+    transition: 0.2s;
+    text-decoration: none;
+}
+.side_top_menu ul li:hover a {
+    color: white;
+}
+.side_top_menu ul li:hover{background-color: #32A7E2;}
+.side_middle_menu ul li:hover a {
+    color: white;
+}
+.side_middle_menu ul li:hover{background-color: #32A7E2;}
+.side_last_menu ul li:hover a {
+    color: white;
+}
+.side_last_menu ul li:hover{background-color: #32A7E2;}
+
+
+    /* aside menu all css stop*/
+
+
+
+section#Main_middle_divison {
+     float: left;
+     width: 785px;
+     height: 100%;
+}
+.main_middle_div {
+    width: 785px;
+    height: 100%;
+}
+
+.search_bar {
+    width: 70%;
+    height: 50px;
+    transform: translate(25px, 20px);
+    display: flex;
+    justify-items: center;
+    vertical-align: middle;
+}
+
+.search_bar input {
+    width: 100%;
+    height: 100%;
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    padding-left: 15px;
+    padding-right: 30px;
+    font-size: 20px;
+    font-family: arial;
+    background: #34333F;
+    color: white;
+}
+
+.search_bar i {
+    color: #5e5b77;
+    width: 0px;
+    height: 100%;
+    position: absolute;
+    right: 23px;
+    top: 17px;
+}
+.main_player {
+    width: 90%;
+    height: 353px;
+    transform: translate(25px, 35px);
+}
+
+.main_player_Image {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.main_player_Image img {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+}
+
+.main_player_control {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 95%;
+    height: 45px;
+    background: #0a070766;
+    display: grid;
+    place-items: center;
+    grid-auto-flow: column;
+    border-radius: 15px;
+}
+.main_player_control span#for_live {
+    background: #8941E3;
+    width: fit-content;
+    padding: 8px 10px 8px 30px;
+    border-radius: 12px;
+    color: white;
+    font-family: arial;
+    position: relative;
+}
+
+.main_player_control span#for_live:before {content: "";width: 8px;height: 8px;background: white;position: absolute;border-radius: 50%;left: 12px;top: 12px;}
+
+.main_player_control span#play_pause {
+    color: white;
+}
+
+.main_player_control span#time_direction {
+    width: 300px;
+    height: 3px;
+    background: grey;
+    border-radius: 15px;
+    position: relative;
+}
+
+.main_player_control span#time_direction:before {content: "";width: 35.34%;height: 3px;background: white;position: absolute;border-radius: 15px;}
+
+.main_player_control span#time {
+    color: #d0d0d0;
+    font-family: -webkit-pictograph;
+    font-weight: bold;
+}
+
+.main_player_control span#voluem, span#setting, span#full_screen {
+    color: #d0d0d0;
+}
+.video_user {
+    width: 220px;
+    height: 60px;
+    display: grid;
+    color: white;
+    place-items: center;
+    grid-auto-flow: column;
+    font-family: -webkit-pictograph;
+    font-size: 14px;
+}
+
+.video_user img {
+    height: 100%;
+    width: 100%;
+}
+
+.video_info_wrapper {
+    width: 100%;
+    height: auto;
+    transform: translate(25px, 55px);
+    display: flex;
+}
+
+.video_indetails {
+    width: 450px;
+}
+
+.video_user img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+.video_user_info span {
+    color: grey;
+}
+
+.video_title {
+    color: white;
+    font-family: sans-serif;
+    font-size: 21px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.video_description {
+    color: #bdbdbd;
+    font-family: monospace;
+    font-size: 13px;
+    margin-top: 25px;
+}
+.video_reaction {}
+
+.video_reaction {
+    width: 220px;
+    height: auto;
+}
+
+.video_reaction_btn {
+    width: fit-content;
+    height: 45px;
+}
+
+.video_reaction_btn a {
+    width: 80px;
+    height: 100%;
+    background: #333241;
+    display: inline-grid;
+    place-items: center;
+    margin-left: 15px;
+    border-radius: 12px;
+    padding-left: 13px;
+    text-decoration: none;
+    color: white;
+    font-family: arial;
+    position: relative;
+}
+.video_reaction_btn a:last-child {
+    background: #EA5F5F;
+}
+
+.video_reaction_rank {
+    margin-top: 25px;
+}
+
+.video_reaction_rank ul {
+    list-style: none;
+    margin-left: 15px;
+}
+
+.video_reaction_rank ul li {
+    color: #4b4b52;
+    font-family: -webkit-pictograph;
+    margin-top: 20px;
+    display: flex;
+    justify-items: center;
+    vertical-align: middle;
+}
+.video_user_info a p {
+    position: relative;
+}
+
+.video_user_info p:before {
+    content: "";
+    width: 7px;
+    height: 7px;
+    background: green;
+    border-radius: 50%;
+    position: absolute;
+    right: 36px;
+    top: 7px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+.video_user_info a {
+    text-decoration: none;
+    color: white;
+}
+.video_reaction_btn a:before {
+    content: "\f1e0";
+    font-family: "Font Awesome 5 Free";
+    position: absolute;
+    left: 9px;
+    color: grey;
+    font-weight: 900;
+}
+.video_reaction_rank ul li i,img {
+    margin: 3px 10px 0px 0px;
+}
+.video_user a img:before {
+    content: "\f004";
+    font-family: "Font Awesome 5 Free";
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background: white;
+    font-size: 40px;
+    width: 10px;
+    height: 10px;
+}
+.video_user a#verify:before {
+    content: "\f00c";
+    position: absolute;
+    font-family: "Font Awesome 5 Free";
+    background: #08A0F7;
+    color: white;
+    top: 38px;
+    left: 42px;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    border: 2px solid #1F1D2B;
+    font-weight: 900;
+    font-size: 10px;
+    display: grid;
+    place-items: center;
+}
+
+
+    /* middle section all css style stop*/
+
+
+
+section#Main_last_division {
+    float: left;
+    height: 95%;
+    width: 400px;
+}
+
+.main_last_division {
+    height: 100%;
+    width: 400px;
+}
+
+.user_profile {
+    width: 180px;
+    height: 60px;
+    display: grid;
+    grid-auto-flow: column;
+    place-items: center;
+    margin-top: 16px;
+    transform: translateX(204px);
+    margin-bottom: 14px;
+}
+
+.user_profile_info {
+    width: 125px;
+    height: 40px;
+    display: grid;
+    place-items: center;
+    grid-auto-flow: column;
+}
+.user_profile_info img {
+    width: 35px;
+    height: 35px;
+    object-fit: cover;
+    border-radius: 100%;
+}
+
+.user_profile_info p {
+    color: white;
+    font-size: 17px;
+    font-family: cursive;
+    margin-right: 10px;
+}
+
+.user_profile_info i {
+    color: grey;
+}
+
+.user_profile_info_notification i {
+    color: grey;
+    width: 10px;
+    height: 10px;
+    font-size: 20px;
+}
+
+.user_profile_info_notification:before {content: "";width: 8px;height: 8px;background: red;position: absolute;border-radius: 100%;top: -4px;left: 10px;border: 2px solid #1F1D2B;}
+
+.user_profile_info_notification {
+    width: 17.5px;
+    height: 21px;
+    position: relative;
+}
+.live_chat {
+    width: 85%;
+    height: 331px;
+    background: #252836;
+    border-radius: 20px;
+    padding: 10px 20px 10px 20px;
+}
+.live_chat_top_content {
+    width: 100%;
+    height: 50px;
+    display: grid;
+    place-items: center;
+    grid-auto-flow: column;
+    border-bottom: 1px solid #8080806e;
+}
+
+.live_chat_top_content h3 {
+    width: 200px;
+    color: white;
+    font-family: cursive;
+}
+
+.live_chat_top_content p#unique {
+    color: grey;
+    font-family: arial;
+}
+.live_chat_top_content i#unique1 {
+    color: grey;
+}
+.live_chat_user_friend_wrapper {
+    width: 100%;
+    height: 71%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.live_chat_user_single_friend {
+    width: 100%;
+    height: 90px;
+    display: grid;
+    place-items: center;
+    grid-auto-flow: column;
+    position: relative;
+}
+
+.live_chat_user_single_friend img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 100%;
+}
+
+.live_chat_user_single_friend_message {
+    font-family: system-ui;
+    font-size: 15px;
+}
+
+.live_chat_user_single_friend_message h3 {
+    color: white;
+    width: fit-content;
+    position: relative;
+}
+
+.live_chat_user_single_friend_message p {
+    color: #9c9c9c;
+}
+
+.live_chat_user_single_friend:before {
+    content: "\f00c";
+    position: absolute;
+    font-family: "Font Awesome 5 Free";
+    background: #08A0F7;
+    color: white;
+    top: 59px;
+    left: 46px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: 2px solid #252836;
+    font-weight: 900;
+    font-size: 8px;
+    display: grid;
+    place-items: center;
+}
+
+.live_chat_user_single_friend_message h3:before {
+    content: "";
+    width: 12px;
+    height: 12px;
+    background: green;
+    border-radius: 50%;
+    position: absolute;
+    right: -22px;
+    top: 7px;
+}
+.inactive h3:after{
+    content: "";
+    width: 12px;
+    height: 12px;
+    background: red;
+    border-radius: 50%;
+    position: absolute;
+    right: -22px;
+    top: 7px;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 5px;
+    height:7px;
+  }
+  /* Track */
+  ::-webkit-scrollbar-track {max-height: 50%; height: 50%;}
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: rgb(102, 102, 102); 
+    border-radius: 10px;
+  }
+
+
+  .live_chat_user_chat_input {
+    width: 100%;
+    height: 30px;
+    transform: translateY(7px);
+    display: grid;
+    place-items: center;
+    grid-auto-flow: column;
+    background: #8080802e;
+    border-radius: 20px;
+    padding: 5px 0px 5px 0px;
+}
+
+.live_chat_user_chat_input i {
+    width: 27px;
+    height: 27px;
+    background: #6C5ECF;
+    border-radius: 100%;
+    display: grid;
+    place-items: center;
+    color: white;
+}
+.live_chat_user_chat_input i#more_option {
+    background: #73737361;
+    color: #2d2d38;
+}
+
+.live_chat_user_chat_input input {
+    width: 250px;
+    outline: none;
+    border: none;
+    padding: 5px;
+    background: none;
+    color: white;
+    font-size: 14px;
+}
+.more_video {
+    width: 100%;
+    height: auto;
+}
+
+.more_video_title {
+    margin-top: 12px;
+    font-size: 20px;
+    font-family: cursive;
+    color: white;
+}
+
+.more_video_single_video {
+    width: 100%;
+    height: 100px;
+    display: grid;
+    place-items: center;
+    grid-auto-flow: column;
+    transform: translateX(-32px);
+}
+
+.more_video_single_video img {
+    width: 100px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.more_video_single_video_description h3 {
+    color: white;
+    font-family: sans-serif;
+}
+
+.more_video_single_video_description {
+    margin-left: -50px;
+    width: 200px;
+}
+
+.more_video_single_video_description p,span {
+    color: grey;
+    font-family: -webkit-pictograph;
+}
+.more_video_btn {
+    transform: translateY(30px);
+    width: 330px;
+}
+
+.more_video_btn a {
+    text-decoration: none;
+    color: white;
+    background: #6C5ECF;
+    border-radius: 15px;
+    font-family: sans-serif;
+    width: 303px;
+    padding: 0px 10px 0px 10px;
+    height: 40px;
+    display: grid;
+    place-items: center;
+}
+.video_reaction_btn a#love_icon:before {
+    content: "\f004";
+    font-family: "Font Awesome 5 Free";
+    position: absolute;
+    left: 9px;
+    color: grey;
+    font-weight: 900;
+}
+.more_video_single_video_description a {
+    text-decoration: none;
+}
+.live_chat_user_chat_input a{
+    text-decoration: none;
+}
+.live_chat_user_single_friend a {
+    text-decoration: none;
+}
+.live_chat_top_content a{
+    text-decoration: none;
+}
+.user_profile_info a{
+    text-decoration: none;
+}
+
+
+
+@media only screen and (max-width: 720px) {
+    section#Side_Menu{
+        position:fixed;
+    }
+    section#Main_middle_divison{
+        width:350px;
+        transform:translateX(65px);
+        float:none;
+        height:auto;
+    }
+    section#Main_last_division{
+        width:350px;
+        transform:translateX(90px);
+        float:none;
+        height:auto;
+    }
+    .search_bar i{
+        right:135px;
+    }
+    .search_bar input{
+        width:80%;
+    }
+    .user_profile{
+        transform:translate(531px,-705px);
+    }
+    .side_middle_menu ul{
+        margin-top:-730px
+    }
+    .side_last_menu ul{
+        margin-top:-1100px
+    }
+    .side_top_menu{
+        transform:translateY(-155px);
+    }
+}
+	
+	</style>
+	
+</head>
+<body>
+    
+        <!--Aside menu all html code start-->
+
+    <section id="Side_Menu">
+        <aside class="side_menu">
+            <div class="side_top_menu">
+                <ul>
+                    <li><a href="#">S</a></li>
+                    <li><a href="#"><i class="fas fa-home"></i></a></li>
+                    <li><a href="#"><i class="fas fa-arrow-right"></i></a></li>
+                    <li><a href="#"><i class="fas fa-cloud-download-alt"></i></a></li>
+                    <li><a href="#"><i class="fas fa-file-download"></i></a></li>
+                    <li><a href="#"><i class="fas fa-file-archive"></i></a></li>
+                </ul>
+            </div>
+            <div class="side_middle_menu">
+                <ul>
+                    <li><a href=""><i class="fas fa-home"></i></a></li>
+                    <li><a href=""><i class="fas fa-arrow-right"></i></i></a></li>
+                    <li><a href=""><i class="fas fa-cloud-download-alt"></i></a></li>
+                    <li><a href=""><i class="fas fa-file-archive"></i></a></li>
+                </ul>
+            </div>
+            <div class="side_last_menu">
+                <ul>
+                    <li><a href=""><i class="fas fa-home"></i></a></li>
+                </ul>
+            </div>
+        </aside>
+    </section>
+
+                <!--Aside menu all html code stop-->
+
+
+    <section id="Main_middle_divison">
+        <div class="main_middle_div">
+            <div class="search_bar">
+                <input type="search" placeholder="search"/>
+                <i class="fas fa-search"></i>
+            </div>
+
+            <div class="main_player">
+                <div class="main_player_Image">
+                    <img src="snack1.jpg" alt="snack.jpg">
+
+                    <div class="main_player_control">
+                        <span id="for_live">Live</span>
+                        <span id="play_pause"><i class="fas fa-pause"></i></span>
+                        <span id="time_direction"></span>
+                        <span id="time">17:34 / 59:32</span>
+                        <span id="voluem"><i class="fas fa-volume-up"></i></span>
+                        <span id="setting"><i class="fas fa-sliders-h"></i></span>
+                        <span id="full_screen"><i class="fas fa-expand"></i></span>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="video_info_wrapper">
+
+                <div class="video_indetails">
+                    <div class="video_user">
+                        <a href="#" id="verify"><img src="youtuber.jpg" alt="youtuber.jpg"></a>
+                        <div class="video_user_info">
+                            <a href="#"><p>Andy William</p></a>
+                            <span>1,980,893 subscribers</span>
+                        </div>
+                    </div>
+                    <div class="video_title">
+                        <h1>Most Dangerous Snack in the World....</h1>
+                    </div>
+                    <div class="video_description">
+                        <p>The saw-scaled viper (Echis carinatus) may be the deadliest of all snakes, since scientists believe it to be responsible for more human deaths than all other snake species combined. Its venom, however, is lethal in less than 10 percent of untreated victims, but the snake's aggressiveness means it bites early and often.
+                            <br><br>The saw-scaled viper (Echis carinatus) may be the deadliest of all snakes, since scientists believe it to be responsible for more human deaths than all other snake species combined.
+                        </p>
+                    </div>
+                </div>
+                <div class="video_reaction">
+                    <div class="video_reaction_btn">
+                        <a href="#">Share</a>
+                        <a href="#" id="love_icon">Liked</a>
+                    </div>
+                    <div class="video_reaction_rank">
+                        <ul>
+                            <li><i class="fas fa-eye"></i> <p>125,908 views</p></li>
+                            <li><i class="fas fa-heart"></i> <p>47,987 likes</p></li>
+                            <li><img src="streaming_icon.png" alt=""><p>1,938,394 streaming</p></li>
+                            <li><i class="fas fa-bell"></i> <p>start 2 hours ago</p></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </section>
+
+    <section id="Main_last_division">
+        <div class="main_last_division">
+            <div class="user_profile">
+                <div class="user_profile_info">
+                    <a href="#"><img src="user.jpg" alt="user.jpg"></a>
+                    <a href="#"><p>Thomas</p></a>
+                    <a href="#"><i class="fas fa-angle-down"></i></a>
+                </div>
+                <div class="user_profile_info_notification">
+                    <a href="#"><i class="fas fa-bell"></i></a>
+                </div>
+            </div>
+
+            <div class="live_chat">
+                <div class="live_chat_top_content">
+                    <h3>Live Chat</h3>
+                    <a href="#"><i class="fas fa-user-friends" id="unique1"></i></a>
+                    <a href="#"><p id="unique">15,986 people</p></a>
+                </div>
+
+                <div class="live_chat_user_friend_wrapper">
+                    <div class="live_chat_user_single_friend">
+                        <a href="#"><img src="speaker-1.jpg" alt=""></a>
+                        <div class="live_chat_user_single_friend_message">
+                            <a href="#"><h3>Kenyetta Lesley</h3></a>
+                            <p>euru euru euru euru euru euru euru euru euru euru</p>
+                        </div>
+                    </div>
+
+                    <div class="live_chat_user_single_friend inactive">
+                        <a href="#"><img src="speaker-2.jpg" alt=""></a>
+                        <div class="live_chat_user_single_friend_message">
+                            <a href="#"><h3>Natisha Decoux</h3></a>
+                            <p>euru euru euru euru euru euru euru euru euru euru</p>
+                        </div>
+                    </div>
+
+                    <div class="live_chat_user_single_friend inactive">
+                        <a href="#"><img src="speaker-3.jpg" alt=""></a>
+                        <div class="live_chat_user_single_friend_message">
+                            <a href="#"><h3>Adolfo Plahs</h3></a>
+                            <p>euru euru euru euru euru euru euru euru euru euru</p>
+                        </div>
+                    </div>
+
+                    <div class="live_chat_user_single_friend">
+                        <a href="#"><img src="speaker-4.jpg" alt=""></a>
+                        <div class="live_chat_user_single_friend_message">
+                            <a href="#"><h3>Mitchell Heggestad</h3></a>
+                            <p>euru euru euru euru euru euru euru euru euru euru</p>
+                        </div>
+                    </div>
+
+                    <div class="live_chat_user_single_friend">
+                        <a href="#"><img src="speaker-5.jpg" alt=""></a>
+                        <div class="live_chat_user_single_friend_message">
+                            <a href="#"><h3>Kenyetta Lesley</h3></a>
+                            <p>euru euru euru euru euru euru euru euru euru euru</p>
+                        </div>
+                    </div>
+
+                    <div class="live_chat_user_single_friend inactive">
+                        <a href="#"><img src="speaker-6.jpg" alt=""></a>
+                        <div class="live_chat_user_single_friend_message">
+                            <a href="#"><h3>Shelly Verghese</h3></a>
+                            <p>euru euru euru euru euru euru euru euru euru euru</p>
+                        </div>
+                    </div>
+
+                    <div class="live_chat_user_single_friend">
+                        <a href="#"><img src="speaker-7.jpg" alt=""></a>
+                        <div class="live_chat_user_single_friend_message">
+                            <a href="#"><h3>Cassandra Kopka</h3></a>
+                            <p>euru euru euru euru euru euru euru euru euru euru</p>
+                        </div>
+                    </div>
+
+                    <div class="live_chat_user_single_friend">
+                        <a href="#"><img src="speaker-8.jpg" alt=""></a>
+                        <div class="live_chat_user_single_friend_message">
+                            <a href="#"><h3>Eugene Clumpner</h3></a>
+                            <p>euru euru euru euru euru euru euru euru euru euru</p>
+                        </div>
+                    </div>
+
+                    <div class="live_chat_user_single_friend">
+                        <a href="#"><img src="speaker-9.jpg" alt=""></a>
+                        <div class="live_chat_user_single_friend_message">
+                            <a href="#"><h3>Md. Nasim</h3></a>
+                            <p>euru euru euru euru euru euru euru euru euru euru</p>
+                        </div>
+                    </div>
+
+                    <div class="live_chat_user_single_friend">
+                        <a href="#"><img src="speaker-10.jpg" alt=""></a>
+                        <div class="live_chat_user_single_friend_message">
+                            <a href="#"><h3>Coder Boy Nasim</h3></a>
+                            <p>euru euru euru euru euru euru euru euru euru euru</p>
+                        </div>
+                    </div>
+
+                    <div class="live_chat_user_single_friend">
+                        <a href="#"><img src="speaker-11.jpg" alt=""></a>
+                        <div class="live_chat_user_single_friend_message">
+                            <a href="#"><h3>Developer Nasim</h3></a>
+                            <p>euru euru euru euru euru euru euru euru euru euru</p>
+                        </div>
+                    </div>
+
+                    <div class="live_chat_user_single_friend">
+                        <a href="#"><img src="speaker-12.jpg" alt=""></a>
+                        <div class="live_chat_user_single_friend_message">
+                            <a href="#"><h3>Show Off King Nasim</h3></a>
+                            <p>euru euru euru euru euru euru euru euru euru euru</p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="live_chat_user_chat_input">
+                    <i class="fas fa-ellipsis-h" id="more_option"></i>
+                    <input type="text" placeholder="write your message"/>
+                    <a href="#"><i class="fab fa-telegram-plane"></i></a>
+                </div>
+
+            </div>
+
+            <div class="more_video">
+                <div class="more_video_title">
+                    <h3>Related Video</h3>
+                </div>
+
+                <div class="more_video_single_video">
+                    <a href="#"><img src="realated_1.jpg" alt="realated_1.jpg"></a>
+                    <div class="more_video_single_video_description">
+                        <a href="#"><h3>History Of Snack...</h3></a>
+                        <a href="#"><p>ICE ImraN</p></a>
+                        <span>125,908 views - 2 days ago</span>
+                    </div>
+                </div>
+
+                <div class="more_video_single_video">
+                    <a href="#"><img src="realated_2.jpg" alt="realated_2.jpg"></a>
+                    <div class="more_video_single_video_description">
+                        <a href="#"><h3>Top 10 Dangerous Snack in the World...</h3></a>
+                        <a href="#"><p>ICE ImraN</p></a>
+                        <span>125,908 views - 3 days ago</span>
+                    </div>
+                </div>
+
+                <div class="more_video_btn">
+                    <a href="#">See all realated videos (32)</a>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+
+</body>
+</html>

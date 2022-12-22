@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Pure JS Slider</title>
+	<link href="Fontawesome_file/all.min.css" type="text/css" rel="stylesheet"/>
+	<link href="Fontawesome_file/fontawesome.min.css" type="text/css" rel="stylesheet"/>
+	<link href="https://kit-pro.fontawesome.com/releases/v5.15.1/css/pro.min.css" rel="stylesheet">
+	
+	<style>
+	
+		*{
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+}
+.container{
+	width:75%;
+	margin: 0 auto;
+	height: 400px;
+	position: relative;
+	overflow: hidden;
+}
+.slides{
+	display: flex;
+	height: 100%;
+	
+}
+.slide{
+	min-width: 100%;
+	height: 100%;
+}
+.slide img{
+	width: 100%;
+	height: 100%;
+}
+.slide_control {
+    position: absolute;
+    top: 50%;
+    left: 0%;
+    transform: translate(0%, -50%);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+#prev_btn, #next_btn{
+	cursor: pointer;
+	padding: 10px;
+	border: none;
+	font-size: 55px;
+	background-color: transparent;
+	outline: none;
+}
+#prev_btn i, #next_btn i{
+	color: #fff;
+}
+.main_container{
+	width: 100%;
+	height: 50%;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	-webkit-transform: translate(-50%,-50%);
+	-moz-transform: translate(-50%,-50%);
+	-ms-transform: translate(-50%,-50%);
+	-o-transform: translate(-50%,-50%);
+}
+	
+	</style>
+	
+</head>
+<body>
+	
+<div class="main_container">
+	<div class="container">
+		<div class="slides">
+			<div class="slide">
+				<img src="BG PIC/1.jpg" alt="">
+			</div>
+			<div class="slide">
+				<img src="BG PIC/2.jpg" alt="">
+			</div>
+			<div class="slide">
+				<img src="BG PIC/3.jpg" alt="">
+			</div>
+			<div class="slide">
+				<img src="BG PIC/4.jpg" alt="">
+			</div>
+			<div class="slide">
+				<img src="BG PIC/5.jpg" alt="">
+			</div>
+			<div class="slide">
+				<img src="BG PIC/6.jpg" alt="">
+			</div>
+			<div class="slide">
+				<img src="BG PIC/7.jpg" alt="">
+			</div>
+			<div class="slide">
+				<img src="BG PIC/8.jpg" alt="">
+			</div>
+			<div class="slide">
+				<img src="BG PIC/9.jpg" alt="">
+			</div>
+			<div class="slide">
+				<img src="BG PIC/10.jpg" alt="">
+			</div>
+			<div class="slide">
+				<img src="BG PIC/11.jpg" alt="">
+			</div>
+			<div class="slide">
+				<img src="BG PIC/12.jpg" alt="">
+			</div>
+		</div>
+
+		<div class="slide_control">
+			<button id="prev_btn" type="button">
+				<i class="fas fa-angle-left"></i>
+			</button>
+			<button id="next_btn" type="button">
+				<i class="fas fa-angle-right"></i>
+			</button>
+		</div>
+	</div>
+</div>
+
+
+
+
+	<script type="text/javascript">
+	
+			const sliderContainer = document.querySelector('.container');
+			const slide = document.querySelector('.slides');
+			const nextBtn = document.getElementById('next_btn');
+			const prevBtn = document.getElementById('prev_btn');
+			const interval = 3000;
+
+
+			let slides = document.querySelectorAll('.slide');
+			let index = 1;
+			let slideId;
+
+			const firstClone = slides[0].cloneNode(true);
+			const lastClone = slides[slides.length - 1].cloneNode(true);
+
+			firstClone.id = 'first-clone';
+			lastClone.id = 'last-clone';
+
+			slide.append(firstClone);
+			slide.prepend(lastClone);
+
+			const slideWidth = slides[index].clientWidth;
+
+			slide.style.transform = `translateX(${-slideWidth * index}px)`;
+
+
+			const startSlide = () =>{
+			  slideId = setInterval(() =>{
+					index++;
+					slide.style.transform = `translateX(${-slideWidth * index}px)`;
+					slide.style.transition = `0.7s all cubic-bezier(0.67, 0.01, 0, 0.99)`;
+				}, interval);
+			}
+
+			slide.addEventListener('transitionend', () =>{
+				slides = document.querySelectorAll('.slide');
+				if(slides[index].id === firstClone.id) {
+					slide.style.transition = `none`;
+					index = 1;
+					slide.style.transform = `translateX(${-slideWidth * index}px)`;
+				}
+				if(slides[index].id === lastClone.id) {
+					slide.style.transition = `none`;
+					index = slides.length - 2;
+					slide.style.transform = `translateX(${-slideWidth * index}px)`;
+				}
+			});
+
+			const moveToNextSlide = () =>{
+				slides = document.querySelectorAll('.slide');
+					if(index >= slides.length - 1) return;
+						index++;
+						slide.style.transform = `translateX(${-slideWidth * index}px)`;
+						slide.style.transition = `0.7s all cubic-bezier(0.67, 0.01, 0, 0.99)`;
+			}
+
+			const moveToprevSlide = () =>{
+					if(index <= 0) return;
+						index--;
+						slide.style.transform = `translateX(${-slideWidth * index}px)`;
+						slide.style.transition = `0.7s all cubic-bezier(0.67, 0.01, 0, 0.99)`;
+			}
+				
+
+			sliderContainer.addEventListener('mouseenter', ()=>{
+				clearInterval(slideId);
+			});
+
+			sliderContainer.addEventListener('mouseleave', startSlide);
+
+			nextBtn.addEventListener('click', moveToNextSlide);
+			prevBtn.addEventListener('click', moveToprevSlide);
+
+
+			startSlide();
+	
+	</script>
+</body>
+</html>

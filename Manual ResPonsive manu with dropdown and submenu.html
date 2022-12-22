@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="Fontawesome_file/all.min.css" type="text/css" rel="stylesheet"/>
+	<link href="Fontawesome_file/fontawesome.min.css" type="text/css" rel="stylesheet"/>
+	<link href="https://kit-pro.fontawesome.com/releases/v5.15.1/css/pro.min.css" rel="stylesheet">
+	
+	
+	<style>
+	
+		*{
+    margin: 0px;
+    padding: 0px;
+}
+#all_menu{
+    width: 100vw;
+    height: 80px;
+    background: #864545;
+}
+.container{
+    width: 95%;
+    margin: auto;
+}
+.logo {
+    width: 20%;
+    height: 75px;
+    position: absolute;
+}
+
+.logo img {
+    width: 100%;
+    height: 100%;
+}
+.mainMenu {
+    height: 80px;
+    color: white;
+    list-style: none;
+    position: relative;
+    top: -10px;
+    width: 67%;
+    float: right;
+}
+
+.mainMenu li {
+    float: left;
+    font-size: 65px;
+    margin-right: 35px;
+}
+
+.mainMenu li a {
+    text-decoration: none;
+    color: white;
+    font-size: 30px;
+}
+.mainMenu li a:hover{
+    text-decoration: underline;
+}
+
+/* home dropdown style */
+ul.HomeDropdown {
+    position: absolute;
+    width: 150px;
+    height: auto;
+    background: #ffd400;
+    top: 90px;
+    left: -32px;
+    list-style: none;
+    padding-left: 30px;
+    padding-top: 0px;
+    padding-bottom: 20px;
+    border-bottom: 3px solid black;
+    border-radius: 0 0 5px 5px;
+    transform: scaleY(0);
+}
+
+ul.ServiceDropdown {
+    position: absolute;
+    width: 200px;
+    height: auto;
+    background: green;
+    top: 90px;
+    left: 78px;
+    list-style: none;
+    padding-left: 30px;
+    padding-top: 0px;
+    padding-bottom: 20px;
+    border-bottom: 3px solid black;
+    border-radius: 0 0 5px 5px;
+    transform: scaleY(0);
+}
+
+ul.produceDropdown {
+    position: absolute;
+    width: 200px;
+    height: auto;
+    background: #ff005e;
+    top: 90px;
+    left: 458px;
+    list-style: none;
+    padding-left: 30px;
+    padding-top: 0px;
+    padding-bottom: 20px;
+    border-bottom: 3px solid black;
+    border-radius: 0 0 5px 5px;
+    transform: scale(0);
+}
+
+ul.HomeDropdown li a {
+    font-size: 30px !important;
+}
+
+ul.HomeDropdown li {
+    margin: 0px !important;
+    padding: 0px !important;
+}
+
+ul.ServiceDropdown li {
+    margin-right: 20px;
+    width: 100%;
+}
+
+ul.produceDropdown li {
+    margin-right: 10px;
+}
+
+ul.produceDropdown li a {
+    font-size: 30px;
+}
+
+ul.ServiceDropdown li a {
+    font-size: 30px;
+}
+ul.produceDropdown_submenu1 {
+    position: absolute;
+    width: 200px;
+    height: auto;
+    background: #5b3131;
+    top: 01px;
+    left: -250px;
+    list-style: none;
+    padding-left: 30px;
+    padding-top: 0px;
+    padding-bottom: 20px;
+    border: 3px solid #342929;
+    border-radius: 10px;
+    transform: scale(0);
+}
+ul.produceDropdown_submenu1:before{
+    content: "";
+    width: 20px;
+    height: 20px;
+    border-radius: 3px;
+    background: #5b3131;
+    border-top: 3px solid #342929;
+    border-right: 3px solid #342929;
+    position: absolute;
+    top: 35px;
+    left: 220px;
+    transform: rotate(45deg);
+}
+
+ul.produceDropdown_submenu2 {
+    position: absolute;
+    width: 200px;
+    height: auto;
+    background: #5b3131;
+    top: 77px;
+    left: -250px;
+    list-style: none;
+    padding-left: 30px;
+    padding-top: 0px;
+    padding-bottom: 20px;
+    border: 3px solid #342929;
+    border-radius: 10px;
+    transform: scale(0);
+}
+ul.produceDropdown_submenu2:before{
+    content: "";
+    width: 20px;
+    height: 20px;
+    border-radius: 3px;
+    background: #5b3131;
+    border-top: 3px solid #342929;
+    border-right: 3px solid #342929;
+    position: absolute;
+    top: 35px;
+    left: 221px;
+    transform: rotate(45deg);
+}
+
+ul.produceDropdown_submenu3 {
+    position: absolute;
+    width: 200px;
+    height: auto;
+    background: #5b3131;
+    top: 152px;
+    left: -250px;
+    list-style: none;
+    padding-left: 30px;
+    padding-top: 0px;
+    padding-bottom: 20px;
+    border: 3px solid #342929;
+    border-radius: 10px;
+    transform: scale(0);
+}
+ul.produceDropdown_submenu3:before{
+    content: "";
+    width: 20px;
+    height: 20px;
+    border-radius: 3px;
+    background: #5b3131;
+    border-top: 3px solid #342929;
+    border-right: 3px solid #342929;
+    position: absolute;
+    top: 35px;
+    left: 221px;
+    transform: rotate(45deg);
+}
+
+ul.produceDropdown_submenu4 {
+    position: absolute;
+    width: 200px;
+    height: auto;
+    background: #5b3131;
+    top: 229px;
+    left: -250px;
+    list-style: none;
+    padding-left: 30px;
+    padding-top: 0px;
+    padding-bottom: 20px;
+    border: 3px solid #342929;
+    border-radius: 10px;
+    transform: scale(0);
+}
+ul.produceDropdown_submenu4:before{
+    content: "";
+    width: 20px;
+    height: 20px;
+    border-radius: 3px;
+    background: #5b3131;
+    border-top: 3px solid #342929;
+    border-right: 3px solid #342929;
+    position: absolute;
+    top: 35px;
+    left: 221px;
+    transform: rotate(45deg);
+}
+.menuBar{
+    display: none;
+}
+.allmenusectionlock{
+    position: fixed;
+    top: 0px;
+}
+
+@media (max-width: 768px){
+    *{
+        margin: 0px;
+        padding: 0px;
+    }
+    #all_menu{
+        width: 98vw;
+        height: 80px;
+        background: #864545;
+    }
+    .container{
+        width: 98%;
+        margin: auto;
+        position: relative;
+    }
+    .logo {
+        width: 40%;
+        height: 70px;
+        position: absolute;
+        margin-top: 4px;
+    }
+    
+    .logo img {
+        width: 100%;
+        height: 100%;
+    }
+    .mainMenu {
+        height: auto;
+        color: white;
+        list-style: none;
+        position: absolute;
+        top: 80px;
+        right: 0px;
+        width: 60%;
+        float: right;
+        transition: 0.3s;
+        transform: scaleY(0);
+        transform-origin: top;
+    }
+    
+    .mainMenu li {
+        float: left;
+        font-size: 65px;
+        padding: 0px 0px 0px 20px;
+        width: 95%;
+        display: block;
+        background: tomato;
+        border-bottom: 2px solid black;
+    }
+    
+    .mainMenu li a {
+        text-decoration: none;
+        color: white;
+        font-size: 30px;
+    }
+    .mainMenu li a:hover{
+        text-decoration: underline;
+    }
+    
+    /* home dropdown style */
+    ul.HomeDropdown {
+        position: absolute;
+        width: 150px;
+        height: auto;
+        background: #ffd400;
+        top: 3px;
+        left: -183px;
+        list-style: none;
+        padding-left: 30px;
+        padding-top: 0px;
+        padding-bottom: 20px;
+        border-bottom: 3px solid black;
+        border-top: 3px solid black;
+        border-left: 3px solid black;
+        border-radius: 5px 0 0 5px;
+        transform: scaleY(0);
+    }
+    
+    ul.ServiceDropdown {
+        position: absolute;
+        width: 160px;
+        height: auto;
+        background: green;
+        top: 75px;
+        left: -175px;
+        list-style: none;
+        padding-left: 2px;
+        padding-right: 10px;
+        padding-bottom: 5px;
+        border-bottom: 3px solid black;
+        border-top: 3px solid black;
+        border-left: 3px solid black;
+        border-radius: 5px 0 0 5px;
+        transform: scaleY(0);
+    }
+    
+    ul.produceDropdown {
+        position: absolute;
+        width: 150px;
+        height: auto;
+        background: #ff005e;
+        top: 383px;
+        left: 0px;
+        list-style: none;
+        padding-left: 5px;
+        padding-right: 25px;
+        padding-bottom: 20px;
+        border-bottom: 3px solid black;
+        border-top: 3px solid black;
+        /* border-left: 3px solid black; */
+        border-radius: 0 0 5px 5px;
+        transform: scale(0);
+    }
+    
+    ul.HomeDropdown li a {
+        font-size: 30px !important;
+    }
+    
+    ul.HomeDropdown li {
+        margin: 0px !important;
+        padding: 0px !important;
+        background: none;
+        border-bottom: none;
+    }
+    
+    ul.ServiceDropdown li {
+        /* margin-right: 20px; */
+        width: 70%;
+        background: none;
+        border-bottom: none;
+    }
+    
+    ul.produceDropdown li {
+        margin-right: 10px;
+        background: none;
+        border-bottom: none;
+    }
+    
+    ul.produceDropdown li a {
+        font-size: 30px;
+    }
+    
+    ul.ServiceDropdown li a {
+        font-size: 30px;
+    }
+    ul.produceDropdown_submenu1 {
+        position: absolute;
+        width: 200px;
+        height: auto;
+        background: #5b3131;
+        top: 01px;
+        left: -250px;
+        list-style: none;
+        padding-left: 30px;
+        padding-top: 0px;
+        padding-bottom: 20px;
+        border: 3px solid #342929;
+        border-radius: 10px;
+        transform: scale(0);
+    }
+    ul.produceDropdown_submenu1:before{
+        content: "";
+        width: 20px;
+        height: 20px;
+        border-radius: 3px;
+        background: #5b3131;
+        border-top: 3px solid #342929;
+        border-right: 3px solid #342929;
+        position: absolute;
+        top: 35px;
+        left: 220px;
+        transform: rotate(45deg);
+    }
+    
+    ul.produceDropdown_submenu2 {
+        position: absolute;
+        width: 200px;
+        height: auto;
+        background: #5b3131;
+        top: 77px;
+        left: -250px;
+        list-style: none;
+        padding-left: 30px;
+        padding-top: 0px;
+        padding-bottom: 20px;
+        border: 3px solid #342929;
+        border-radius: 10px;
+        transform: scale(0);
+    }
+    ul.produceDropdown_submenu2:before{
+        content: "";
+        width: 20px;
+        height: 20px;
+        border-radius: 3px;
+        background: #5b3131;
+        border-top: 3px solid #342929;
+        border-right: 3px solid #342929;
+        position: absolute;
+        top: 35px;
+        left: 221px;
+        transform: rotate(45deg);
+    }
+    
+    ul.produceDropdown_submenu3 {
+        position: absolute;
+        width: 200px;
+        height: auto;
+        background: #5b3131;
+        top: 152px;
+        left: -250px;
+        list-style: none;
+        padding-left: 30px;
+        padding-top: 0px;
+        padding-bottom: 20px;
+        border: 3px solid #342929;
+        border-radius: 10px;
+        transform: scale(0);
+    }
+    ul.produceDropdown_submenu3:before{
+        content: "";
+        width: 20px;
+        height: 20px;
+        border-radius: 3px;
+        background: #5b3131;
+        border-top: 3px solid #342929;
+        border-right: 3px solid #342929;
+        position: absolute;
+        top: 35px;
+        left: 221px;
+        transform: rotate(45deg);
+    }
+    
+    ul.produceDropdown_submenu4 {
+        position: absolute;
+        width: 200px;
+        height: auto;
+        background: #5b3131;
+        top: 229px;
+        left: -250px;
+        list-style: none;
+        padding-left: 30px;
+        padding-top: 0px;
+        padding-bottom: 20px;
+        border: 3px solid #342929;
+        border-radius: 10px;
+        transform: scale(0);
+    }
+    ul.produceDropdown_submenu4:before{
+        content: "";
+        width: 20px;
+        height: 20px;
+        border-radius: 3px;
+        background: #5b3131;
+        border-top: 3px solid #342929;
+        border-right: 3px solid #342929;
+        position: absolute;
+        top: 35px;
+        left: 221px;
+        transform: rotate(45deg);
+    }
+    .menuBar{
+        display: initial;
+        position: absolute;
+        right: 20px;
+        top: 6px;
+        font-size: 65px;
+        cursor: pointer;
+    }
+}
+	
+	</style>
+
+
+	<title>Mobile Responsive Menu</title>
+</head>
+<body onscroll="abijabi()">
+	<h1 align='center'>Menu With Dropdown & Multiple submenu</h1>
+	<section id="all_menu">
+		<div class="container">
+			<div class="logo">
+				<img src="main-logo-original.png" alt="">
+			</div>
+			<div>
+				<div class="menuBar">
+					<i class="fas fa-bars"></i>
+				</div>
+				<ul class="mainMenu">
+					<li><a href="#" id="homeList">Home <i class="fas fa-caret-down"></i></a>
+						<ul class="HomeDropdown">
+							<li><a href="#">Home - 1</a></li>
+							<li><a href="https://www.google">Home - 2</a></li>
+							<li><a href="#">Home - 3</a></li>
+							<li><a href="#">Home - 4</a></li>
+						</ul>
+					</li>
+					<li><a href="#" id="serviceList">Service <i class="fas fa-caret-down"></i></a>
+						<ul class="ServiceDropdown">
+							<li><a href="#">Comment</a></li>
+							<li><a href="#">Apply</a></li>
+							<li><a href="#">Rating</a></li>
+						</ul>
+					</li>
+					<li><a href="#">Gallary</a></li>
+					<li><a href="#">Contect</a></li>
+					<li><a href="#" id="productList">Product <i class="fas fa-caret-down"></i></a>
+						<ul class="produceDropdown">
+							<li><a href="#" id="produceDropdown1li">Product-1 <i class="fas fa-caret-right"></i></a>
+								<ul class="produceDropdown_submenu1">
+									<li><a href="#">About This</a></li>
+									<li><a href="#">Rating</a></li>
+									<li><a href="#">Comment</a></li>
+								</ul>
+							</li>
+							<li><a href="#" id="produceDropdown2li">Product-2 <i class="fas fa-caret-right"></i></a>
+								<ul class="produceDropdown_submenu2">
+									<li><a href="#">About This</a></li>
+									<li><a href="#">Rating</a></li>
+									<li><a href="#">Comment</a></li>
+								</ul>
+							</li>
+							<li><a href="#" id="produceDropdown3li">Product-3 <i class="fas fa-caret-right"></i></a>
+								<ul class="produceDropdown_submenu3">
+									<li><a href="#">About This</a></li>
+									<li><a href="#">Rating</a></li>
+									<li><a href="#">Comment</a></li>
+								</ul>
+							</li>
+							<li><a href="#" id="produceDropdown4li">Product-4 <i class="fas fa-caret-right"></i></a>
+								<ul class="produceDropdown_submenu4">
+									<li><a href="#">About This</a></li>
+									<li><a href="#">Rating</a></li>
+									<li><a href="#">Comment</a></li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+					<li><a href="#">Log In</a></li>
+				</ul>
+			</div>
+		</div>
+	</section>
+
+	<section>
+		<h1 style="font-size: 50px;text-align: center;">Some Text For Scroll</h1>
+
+		<p align='justify'>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellat neque ipsam cumque dolore ut expedita numquam ipsa asperiores minima perferendis quam quas, quis aperiam maxime amet sed deserunt reiciendis earum et velit atque hic dicta. Molestias, fuga ipsum. Laudantium, est? Hic ad, repellendus natus odio suscipit consequatur iste. Sunt, dolorem. Doloremque iste neque provident repudiandae reprehenderit pariatur dolorum temporibus debitis harum quaerat, aspernatur nihil impedit adipisci magnam, dicta odit. Alias ut necessitatibus autem. Voluptatum, vel deleniti. Cum libero quod ipsam similique eaque quaerat voluptatibus veniam officia officiis nam molestiae, molestias corporis possimus eius. Officiis placeat vero earum fugit. Maxime nostrum magni nulla laudantium nihil sunt corrupti quia consectetur perspiciatis, facere ad explicabo in, optio id voluptas ipsam eveniet recusandae quibusdam molestias aut sint, unde eos! Veniam, harum earum. Earum quasi aliquam quia, omnis veniam nisi commodi repudiandae provident at ratione aperiam, voluptatem repellat expedita similique adipisci culpa fugit, modi praesentium. Ipsam doloremque quos molestiae! Debitis aut esse vitae laborum laboriosam quaerat qui, consequuntur nihil repellat id iste nobis quas at beatae eos perferendis veniam dolores officiis. Qui ipsam veritatis officia, reprehenderit rem facere recusandae obcaecati commodi iusto quo. Dolorem quis non provident cupiditate odit laborum, magni, perferendis tempore illo fugiat esse a debitis! Odit nisi dignissimos perspiciatis dicta eos illo doloremque possimus harum dolor accusantium illum culpa nihil alias ipsam placeat, consequatur voluptates, in temporibus non delectus mollitia. Accusantium consequatur deserunt iusto fugit eveniet eos perspiciatis quos dignissimos optio, ab, labore pariatur. Quaerat consectetur tempore natus dolorum similique repellendus fugit, ducimus assumenda, corporis perspiciatis sunt quas pariatur quisquam beatae doloribus distinctio! Iusto eum numquam voluptate, ut odio quo, ipsum maiores veritatis autem similique, voluptatibus inventore dolorum! Quia veritatis ad nisi repudiandae saepe perferendis accusantium molestias, inventore repellendus aperiam quam. Hic, nihil! Aspernatur natus aperiam sed unde eligendi perspiciatis quis obcaecati! Vel, placeat iste! Quam exercitationem repudiandae animi vel facilis maiores amet assumenda nihil, accusamus esse corporis minima. Consequatur ad ratione laborum ipsum accusamus labore minima corporis, laudantium aliquid eum delectus error provident voluptatibus deleniti explicabo soluta et ullam enim commodi, possimus veritatis! Non neque tenetur amet nam repellendus qui natus provident ex, praesentium distinctio accusamus quam dolore voluptas debitis voluptatum quidem magni alias mollitia consectetur omnis ratione culpa dolorum! Voluptas mollitia adipisci ipsam culpa asperiores quisquam omnis blanditiis officia debitis animi? Dolorum quasi omnis distinctio error officia natus adipisci quia placeat inventore quidem? Veniam ratione explicabo eaque quisquam, reprehenderit corporis natus harum perferendis sed animi quasi nam sapiente laudantium nesciunt doloribus minus, maiores debitis? Explicabo doloribus consequuntur ea qui, vero possimus ipsum veritatis quisquam ipsam enim iusto, laborum fugiat placeat hic dolore ratione, aliquid porro. Eos, consequatur rem ipsum, pariatur, voluptate a dolore illo officia cumque ullam debitis explicabo suscipit esse quae accusantium. Eius expedita deleniti dolorum magnam eveniet officia iusto neque molestiae est recusandae? Tempora vero cum deserunt exercitationem maxime! Consequatur iste voluptates autem eveniet impedit a neque ipsam incidunt? Vitae et ea animi, eius qui quibusdam natus! Maiores distinctio sed corrupti in excepturi saepe ut alias obcaecati harum. Iusto odio nemo facere. Veritatis assumenda fugiat rem quis excepturi voluptas saepe quod totam quia explicabo. Nesciunt, natus? Consectetur obcaecati fugit voluptas tempora beatae, deserunt vero porro quia laborum laudantium, animi et ipsam. Fugiat, expedita consectetur voluptatum corporis incidunt dicta repellat minus. Deleniti, consequatur incidunt. Non nobis, animi repudiandae quae sapiente officia corrupti in quod pariatur veniam error nemo, natus tenetur assumenda delectus. Enim illum natus unde facilis, voluptatibus consequuntur eveniet corporis asperiores libero, repudiandae provident porro consequatur totam quasi sunt quod? Aliquid perferendis expedita adipisci aspernatur obcaecati tenetur aperiam beatae nesciunt molestias consequatur, vitae dolores cupiditate optio quaerat sunt possimus placeat enim eos repellat cumque ducimus fuga quo. Suscipit ratione saepe nisi a tenetur ipsam debitis blanditiis quaerat similique perferendis, modi sit et cumque odio eius dolores culpa alias quam animi, vero repudiandae ipsa quis! Amet corrupti ipsum deleniti error esse necessitatibus voluptates asperiores expedita sed laborum nostrum nesciunt eius vel optio, a aliquam adipisci dicta hic facilis! Dolorum perspiciatis autem doloribus ab in, eveniet tempore aliquam sapiente possimus minima, nam, facilis obcaecati. Tenetur, dicta consectetur debitis nisi assumenda, tempore dolorum pariatur velit minus deserunt veritatis soluta officiis, quisquam excepturi in? Sed, numquam architecto. Quo, ut nostrum quam ipsa neque recusandae labore exercitationem rerum alias ea facilis dolorem commodi, sed ab sit voluptates consequatur? Dolores animi perferendis minus repellat facere optio, natus reiciendis consequuntur corrupti at maiores ipsum rem quam eos iusto ipsa reprehenderit, recusandae sint officia provident unde, magni veritatis. Necessitatibus eligendi in itaque harum, neque obcaecati. In placeat explicabo omnis, corrupti accusamus sint magnam, cum veniam repellat fugiat numquam ab assumenda a hic laboriosam, dicta odit ratione animi nihil dolor? Sapiente iste autem tenetur minima commodi et quae atque! Ipsam ducimus, sunt doloribus sint repudiandae iste neque quis ea nostrum voluptatum, enim minus! Incidunt corrupti quod explicabo. Labore modi perferendis laboriosam explicabo totam neque repellendus quod, eos culpa nostrum accusamus illum maiores laudantium mollitia dolore aliquid ipsum? Consequuntur enim porro ducimus maiores, incidunt minima ipsum, ex numquam quisquam repellat accusantium nobis beatae rem quasi magnam eaque asperiores at, officiis deleniti adipisci vitae! Facilis neque quisquam tempora rerum a libero. Quam quidem similique dolorem consectetur dolor earum aspernatur culpa voluptatibus saepe deserunt iusto error at, perferendis adipisci minima tenetur laborum, quas quaerat nulla placeat illum, aliquid harum. Inventore vitae qui est quibusdam ipsum optio labore placeat rem cumque laudantium. Ex aspernatur enim natus aliquam, illum earum dolorem officiis dolor quaerat cumque iusto vero facilis odit ab? Molestiae eos mollitia dolores, provident similique minus? Perferendis fugit aspernatur at nam omnis corporis voluptas explicabo facilis porro eius, amet, maiores incidunt labore culpa, eos laudantium voluptatum vel tempore aut ab? Ducimus voluptatum voluptas quasi modi ea, cupiditate praesentium ut reprehenderit hic atque minima aliquam perspiciatis eligendi? Hic doloribus soluta dicta laboriosam eum ipsa quae, magnam dolorem eveniet ex odio, alias unde molestiae pariatur. Totam nostrum dicta, voluptatibus, aliquid molestiae reiciendis ab necessitatibus maxime laboriosam fugiat ducimus adipisci temporibus sapiente sit culpa suscipit hic incidunt, est cumque natus voluptatem assumenda qui? Illum nobis at doloremque consequatur rerum architecto quo earum quam neque enim expedita odit impedit laborum praesentium atque consectetur saepe, ipsum sequi accusamus! Soluta fuga enim nemo quas itaque doloremque sint vero deleniti ea, nam voluptates neque voluptate aspernatur id, explicabo dicta sequi, quia reprehenderit harum laudantium aliquam pariatur vel? Suscipit enim voluptatum itaque, est corrupti doloribus amet placeat similique numquam vel cumque expedita facilis repellat temporibus. Natus expedita exercitationem ullam? Exercitationem eligendi consectetur, ratione, quas facere fugit impedit iure iusto tempora maxime unde architecto. Reiciendis adipisci quae commodi quos incidunt sed error magnam culpa aliquid aperiam dolor porro eaque ab ea deleniti natus, unde necessitatibus perferendis, ducimus expedita fuga vel! Magni, sit voluptatibus? Sapiente animi at deleniti quae, delectus nostrum, recusandae dolorum veniam praesentium cupiditate illum velit est reiciendis ullam laboriosam, odio eligendi nemo provident aliquam. Eum, iusto rerum? Obcaecati porro saepe facere quisquam amet cumque molestias molestiae eaque harum, iste dicta ad veniam, doloribus natus dignissimos id nulla facilis provident commodi voluptatibus sed. Dignissimos perspiciatis nesciunt tempore expedita, iusto magni, id dolore architecto porro, atque ipsam. Excepturi aut quo rerum repudiandae dolorem ab deserunt incidunt fugiat veritatis. Magnam omnis nemo, suscipit tenetur tempore dignissimos iure, itaque quos fuga doloribus corrupti dicta perspiciatis. Quae accusamus hic blanditiis maxime ipsum quasi, deleniti tempora, corporis eaque excepturi animi similique natus nisi soluta minima itaque earum. Beatae, natus? Sunt sed illo obcaecati ipsum eveniet quaerat labore corporis quidem quo unde corrupti magnam modi dicta quod similique totam dolorem beatae commodi quibusdam, nam voluptas ducimus? Sequi laudantium dolorem earum veritatis atque magni, aspernatur officiis doloribus eveniet quaerat praesentium tenetur omnis explicabo necessitatibus rem autem recusandae dolorum, quasi nisi corrupti numquam reprehenderit vel? Beatae illo quas, tenetur velit vitae commodi sint. Hic exercitationem incidunt, vitae atque assumenda obcaecati impedit aperiam earum mollitia libero esse veniam. Ea doloremque aliquid esse voluptas voluptatum delectus est placeat repudiandae veniam eum iusto quo dicta laborum porro accusantium nulla enim maiores, quam eos quis mollitia blanditiis temporibus? Officia distinctio ducimus consectetur quo blanditiis suscipit in quisquam excepturi reprehenderit explicabo sit commodi voluptatibus nihil architecto ut ipsa asperiores magnam, ipsum voluptate culpa! Nam nemo illo recusandae accusamus veniam autem, mollitia ex aliquid. Vero doloribus laboriosam maxime? Ullam voluptate delectus unde assumenda sunt reiciendis aliquid vitae minus, architecto soluta maiores. Quod optio, aperiam dolor enim accusantium quos? Nam, aperiam! Ullam eum est facere! Dolore corporis asperiores provident. Dolorum ex, molestiae fugit mollitia iusto laborum magni dolorem iure dolores quaerat consequatur beatae ipsum doloribus, obcaecati </p>
+	</section>
+
+
+
+	<script>
+	
+		let homeBtn = document.querySelector('#homeList');
+let homeDropDown = document.querySelector('.HomeDropdown');
+
+homeBtn.addEventListener('focus',function(){
+    homeDropDown.style.transform = "scaleY(1)";
+});
+homeBtn.addEventListener('focusout',function(){
+    homeDropDown.style.transform = "scaleY(0)";
+});
+
+// service dropdown programme
+
+let serviceBtn = document.querySelector('#serviceList');
+let serviceDropDown = document.querySelector('.ServiceDropdown');
+
+serviceBtn.addEventListener('focus',function(){
+    serviceDropDown.style.transform = "scaleY(1)";
+});
+serviceBtn.addEventListener('focusout',function(){
+    serviceDropDown.style.transform = "scaleY(0)";
+});
+
+// product dropdown programme
+
+let productBtn = document.querySelector('#productList');
+let productDrop_Down = document.querySelector('.produceDropdown');
+
+productBtn.addEventListener('focus',function(){
+    productDrop_Down.style.transform = "scaleY(1)";
+});
+productBtn.addEventListener('focusout',function(){
+    productDrop_Down.style.transform = "scaleY(0)";
+});
+
+
+// productDrop_Down submenu Programming
+
+let pDd1List = document.querySelector('#produceDropdown1li');
+let pDd2List = document.querySelector('#produceDropdown2li');
+let pDd3List = document.querySelector('#produceDropdown3li');
+let pDd4List = document.querySelector('#produceDropdown4li');
+
+pDd1List.addEventListener('mouseover',function(){
+    document.querySelector('.produceDropdown_submenu1').style.transform = "scaleY(1)";
+});
+pDd1List.addEventListener('mouseout',function(){
+    document.querySelector('.produceDropdown_submenu1').style.transform = "scaleY(0)";
+});
+
+// for 22222222222222
+
+pDd2List.addEventListener('mouseover',function(){
+    document.querySelector('.produceDropdown_submenu2').style.transform = "scaleY(1)";
+});
+pDd2List.addEventListener('mouseout',function(){
+    document.querySelector('.produceDropdown_submenu2').style.transform = "scaleY(0)";
+});
+
+// for 33333333333333333
+
+pDd3List.addEventListener('mouseover',function(){
+    document.querySelector('.produceDropdown_submenu3').style.transform = "scaleY(1)";
+});
+pDd3List.addEventListener('mouseout',function(){
+    document.querySelector('.produceDropdown_submenu3').style.transform = "scaleY(0)";
+});
+
+// for 444444444444
+
+pDd4List.addEventListener('mouseover',function(){
+    document.querySelector('.produceDropdown_submenu4').style.transform = "scaleY(1)";
+});
+pDd4List.addEventListener('mouseout',function(){
+    document.querySelector('.produceDropdown_submenu4').style.transform = "scaleY(0)";
+});
+
+
+// main menu hide and show
+
+let menuBtn = document.querySelector('.menuBar');
+let primemenuList = document.querySelector('.mainMenu');
+
+menuBtn.addEventListener('click', function(){
+    primemenuList.style.transform = "scale(1)";
+});
+
+
+// window scroll mainmenu auto lock
+
+let fullSection = document.querySelector('#all_menu');
+
+function abijabi(){
+    if(document.body.scrollTop > 50 || document.documentElement.scrollTop > 50){
+        fullSection.classList.add('allmenusectionlock');
+    }else{
+        fullSection.classList.remove('allmenusectionlock');
+    }
+}
+    
+    
+
+	
+	</script>
+</body>
+</html>

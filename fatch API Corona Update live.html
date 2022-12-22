@@ -1,0 +1,88 @@
+<html>
+	<head>
+		<title>Corona Live Update</title>
+		<style>
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			h1{
+				text-align: center;
+			}
+			table{
+				border-collapse: collapse;
+				width: 90%;
+			}
+			
+			.container{
+				width: 100vw;
+				height: 100vh;
+				display: grid;
+				place-items: center;
+			}
+		</style>
+	</head>
+	
+	<body>
+	
+		<h1>Corona 19 API</h1>
+		
+		<div class="container">
+			<table border='1'>
+				<thead>
+					<tr>
+						<th>Country</th>
+						<th>Cases</th>
+						<th>Today Cases</th>
+						<th>Deaths</th>
+						<th>Today Deaths</td>
+						<th>Recovered</th>
+						<th>Active</th>
+						<th>Critical</th>
+						<th>Cases Per One Million</th>
+						<th>Deaths Per One Million</th>
+						<th>Total Tests</th>
+						<th>Tests Per One Million</th>
+					</tr>
+				</thead>
+				<tbody id='tbody'>
+					
+				</tbody>
+			</table>
+		</div>
+	</body>
+	
+	<script>
+	
+		fetch('https://coronavirus-19-api.herokuapp.com/countries')
+		
+		.then(response => response.json())
+		.then(data => {
+			
+			data.forEach(value => {
+				var tbTable = `
+					<tr>
+						<td>${value.country}</td>
+						<td>${value.cases}</td>
+						<td>${value.todayCases}</td>
+						<td>${value.deaths}</td>
+						<td>${value.todayDeaths}</td>
+						<td>${value.recovered}</td>
+						<td>${value.active}</td>
+						<td>${value.critical}</td>
+						<td>${value.casesPerOneMillion}</td>
+						<td>${value.deathsPerOneMillion}</td>
+						<td>${value.totalTests}</td>
+						<td>${value.testsPerOneMillion}</td>
+					</tr>
+				`;
+				
+				let tBody = document.querySelector('#tbody');
+				tBody.innerHTML += tbTable;
+				
+				// tBody.insertAdjacentHTML('beforebegin', tbTable)
+			});
+		})
+	
+	</script>
+</html>

@@ -1,0 +1,33 @@
+
+Atom most usefull exetension
+____________________________
+
+
+
+file icon ==== atom file icon
+
+atom devide ==== pen layout plus
+
+code beauty ==== atom-beautify
+
+code autoclouse ==== auto clouse html plus
+
+all code show aside ==== minimap
+
+auto color indecator ==== pigment
+
+color picker ==== color-picker 2M d.
+
+zencoding ==== emmet
+
+help stackoverflow === ask-stack
+
+javascript shortcut === tarvo javascript and javascript snippets
+
+file open by file path ==== advance open file
+
+reent file open ==== open recent 
+
+               === linter 8M d.
+
+terminal ==== platformia ide terminal

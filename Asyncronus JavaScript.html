@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CallBack Function</title>
+</head>
+
+<body>
+
+
+
+    <script>
+
+        // get data from server by callback function
+
+        // function allUserData(callback){
+        //     setTimeout(()=>{
+        //         let users = [
+        //             {
+        //                 name:"Tushar",
+        //                 age:24
+        //             },
+        //             {
+        //                 name:"Mohshin",
+        //                 age:54
+        //             },
+        //             {
+        //                 name:"Papiya",
+        //                 age:16
+        //             },
+        //             {
+        //                 name:"Perven",
+        //                 age:40
+        //             },
+        //             {
+        //                 name:"Atifa",
+        //                 age:07
+        //             }
+        //         ]
+
+        //         callback(users)
+        //     },2000)
+        // }
+
+        // function user(name,age,callback){
+        //     setTimeout(()=>{
+        //         let user = {name:name,age:age}
+        //         callback(user)
+        //     },2000)
+        // }
+
+        // function work(name,callback){
+        //     setTimeout(()=>{
+        //         let works = [name,"work1","work2","work3"]
+
+        //         callback(works)
+        //     },1000)
+        // }
+
+        // allUserData((users)=>{
+        //     console.log(users);
+        //     user(users[4].name,users[4].age,(user)=>{
+        //         console.log(user);
+        //         work(user.name,(works)=>{
+        //             console.log(works);
+        //         })
+        //     })
+        // })
+
+
+
+
+
+
+
+
+        //  get data from server by promise
+
+
+        // function firstData() {
+        //     return new Promise((reslove, reject) => {
+        //         setTimeout(() => {
+        //             reslove("This is my first data")
+        //         }, 2000)
+        //     })
+        // }
+
+        // function secoundData(data) {
+        //     return new Promise((reslove, reject) => {
+        //         setTimeout(() => {
+        //             reslove(data + ": This is my secound data")
+        //             //reject("May be serber is down chack sometimes later")
+        //         }, 2000)
+        //     })
+        // }
+
+        // firstData()
+        //     .then(data => secoundData(data))
+        //     .then(data => console.log(data))
+
+        //     .catch((err) => console.error(err))
+
+
+
+        // promise all method........
+
+
+        // const firstData = new Promise((reslove,reject)=>{
+        //     setTimeout(()=>{
+        //         reject("Something is else")
+        //         //reslove("This is my first data")
+        //     },2000)
+        // })
+
+        // const secoundData = new Promise((reslove,reject)=>{
+        //     setTimeout(()=>{
+        //         reslove("This is my secound data")
+        //     },2000)
+        // })
+
+        // Promise.all([firstData,secoundData])
+        //     .then(data=>console.log(data))
+        //     .catch((err)=>console.error(err))
+
+
+
+        // when i make a promise which is just return  ' reslove ' or ' reject '
+
+
+        // const mydata = Promise.resolve("This my data here")
+        // const myData = Promise.reject("OHH my god what is this!!")
+
+        // mydata.then(data => console.log(data))
+        // myData.catch(data => console.error(data))
+
+
+        // async and await fuction........
+
+        function allUserData() {
+
+            return new Promise((reslove, reject) => {
+                setTimeout(() => {
+                    let users = [
+                        {
+                            name: "Tushar",
+                            age: 24
+                        },
+                        {
+                            name: "Mohshin",
+                            age: 54
+                        },
+                        {
+                            name: "Papiya",
+                            age: 16
+                        },
+                        {
+                            name: "Perven",
+                            age: 40
+                        },
+                        {
+                            name: "Atifa",
+                            age: 07
+                        }
+                    ]
+
+                    reject(users)
+                }, 500)
+            })
+        }
+
+        function user(name, age) {
+            return new Promise((reslove, reject) => {
+                setTimeout(() => {
+                    let user = { name: name, age: age }
+                    reslove(user)
+                }, 500)
+            })
+        }
+
+        function work(name) {
+            return new Promise((reslove, reject) => {
+                setTimeout(() => {
+                    let works = [name, "work1", "work2", "work3"]
+
+                    reslove(works)
+                }, 500)
+            })
+        }
+
+        async function salaKajkor() {
+            try {
+                let users = await allUserData()
+                let moreData = await user(users[3].name, users[3].age)
+                let works = await work(moreData.name)
+                console.log(works);
+            } catch {
+                console.error("Something Is else!!!");
+            }
+        }
+
+        salaKajkor()
+
+    </script>
+</body>
+
+</html>

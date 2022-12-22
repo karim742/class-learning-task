@@ -1,0 +1,109 @@
+<html>
+	<head>
+		<title>CSS Advance Practice</title>
+		<style>
+			*{
+	margin:0px;
+	padding:0px;
+	box-sizing:border-box;
+	font-family:arial;
+}
+
+.container{
+	position:relative;
+	top:20%;
+	left:50%;
+	transform:translate(-20%);
+}
+
+.bird_img{
+	width:200px;
+	height:200px;
+}
+.blend{
+	width:200px;
+	height:200px;
+	mix-blend-mode: multiply;
+}
+
+.bird_img img{
+	width:200px;
+	height:200px;
+	position:relative;
+    
+}
+.blend img{
+	width:200px;
+	height:200px;
+	position:relative;
+	top:-200px;
+}
+.rotate_border{
+	width:200px;
+	height:200px;
+	border:5px solid red;
+	transform:rotate(45deg);
+	position:absolute;
+	top:0px;
+	left:0px;
+}
+.grid{
+	display:grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 1fr 1fr;
+	width: 100%;
+	height: 100%;
+	position: relative;
+	top: -200px;
+	left: 0px;
+}
+.grid1{
+	display:grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 1fr 1fr;
+	width: 100%;
+	height: 100%;
+	position: relative;
+	top: -400px;
+	left: 0px;
+}
+.White_side{
+	background: #fff;
+}
+		
+		</style>
+	</head>
+	
+	<body>
+		
+		<div class="container">
+		
+			<div class="bird_img">
+				<img src="Hamim Bird.jpg"/>
+				
+				<div class="rotate_border"></div>
+				
+					<div class="grid">
+						<div class="White_side"></div>
+						<div></div>
+						<div></div>
+						<div class="White_side"></div>
+					</div>
+			</div>
+			
+			
+			
+			<div class="blend">
+				<img src="Hamim Bird.jpg"/>
+				
+					<div class="grid1">
+						<div></div>
+						<div class="White_side"></div>
+						<div class="White_side"></div>
+						<div></div>
+					</div>
+			</div>
+		
+	</div>
+	</body>
+</html>

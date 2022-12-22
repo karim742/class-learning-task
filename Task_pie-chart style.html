@@ -1,0 +1,106 @@
+<html>
+	<head>
+		<title>CSS Advance Practice</title>
+		
+		<style>
+		
+			*{
+	margin:0px;
+	padding:0px;
+	box-sizing:border-box;
+	font-family:Times New Roman;
+}
+
+body{
+    background: green;
+}
+.container {
+    position: relative;
+    top: 50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    width: 950px;
+    height: 370px;
+    background: white;
+    padding: 15px;
+}
+.Top_title h1 {
+    font-size: 20px;
+}
+
+.Top_title {
+    width: fit-content;
+    margin: auto;
+}
+.Details_Pie_chart {
+    width: fit-content;
+    font-size: 20px;
+    float: right;
+    position: absolute;
+    top: 80px;
+    right: 10px;
+    line-height: 45px;
+}
+.Details_Pie_chart span {
+    width: 15px;
+    height: 15px;
+    position:absolute;
+    border-radius:100%;
+    left: -25px;
+}
+.Details_Pie_chart p {
+    top: -15px;
+    position: relative;
+}
+.Pie_chart{
+	float:left;
+	background: radial-gradient(circle closest-side, transparent 100%, #fff 0),
+	conic-gradient(
+		from 180deg,
+		#FFC000 0,
+		#FFC000 5.50%,
+		#DAE3F3 0,
+		#DAE3F3 11%,
+		#70AD47 0,
+		#70AD47 50.50%,
+		#4472C4 0,
+		#4472C4 71.9%,
+		#ED7D31 0,
+		#ED7D31 88%,
+		#A5A5A5 0,
+		#A5A5A5 100%
+	);
+	min-width:500px;
+	min-height:250px;
+	margin-top: 35px;
+	margin-left: 20px;
+}
+		
+		</style>
+		
+	</head>
+	
+	<body>
+		
+		<div class="container">
+			<div class="Top_title">
+				<h1>Bangladesh Main Imports in China (FY 2018 - 19)</h1>
+			</div>
+			
+			<div class="Pie_chart"></div>
+			
+			<div class="Details_Pie_chart">
+			
+				<span style="background:#70AD47"></span><p>Nuclear Machinery</p>
+				<span style="background:#DAE3F3"></span><p>Cotton</p>
+				<span style="background:#FFC000"></span><p>Electrical machinery and equipment</p>
+				<span style="background:#A5A5A5"></span><p>Man-made staple fibres</p>
+				<span style="background:#ED7D31"></span><p>Kiitted or cro cheted fabrics</p>
+				<span style="background:#4472C4"></span><p>Others</p>
+			
+			</div>
+			
+		</div>
+		
+	</body>
+</html>

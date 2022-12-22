@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button class="btn">Switch</button>
+
+
+    <script>
+        let button = document.querySelector('.btn')
+
+        button.addEventListener('click', function () {
+
+            localStorage.setItem('data', JSON.stringify('initial'))
+
+            if (localStorage.getItem('data') === 'initial') {
+                localStorage.setItem('data', JSON.stringify('gray'))
+
+            } else {
+                localStorage.setItem('data', JSON.stringify('initial'))
+
+            }
+
+        })
+
+        // localStorage.setItem('data',JSON.parse(localStorage.getItem('data')))
+
+        // document.querySelector('body').style.backgroundColor = JSON.parse(localStorage.getItem('data'))
+
+
+
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>

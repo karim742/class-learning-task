@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Jakat</title>
+	<style>
+		#totalIncome{
+			outline: none;
+			padding: 2px;
+		}
+		.totalIncomewhenfocus{
+			border: 1px solid rgb(40 40 242);
+			box-shadow: 0px 0px 8px 0px rgb(59 59 246);
+			border-radius: 3px;
+			padding: 2px;
+		}
+	</style>
+</head>
+<body>
+	
+	<h1>Input Your Total Income</h1>
+
+	<label for="totalIncome"><b>Income:</b></label>
+	<input type="number" placeholder="Total Amount" name="totalIncome" id="totalIncome"> <br> <br>
+
+	<button type="submit" id="submit">Submit</button>  <br> <br>
+
+	<b>Jakat Rate: <span style="color:green">2.50</span></b>  <br> <br>
+
+	<b>Jakater Amount: <span id="jakaterPoriman" style="color: red;"></span></b> <br> <br>
+
+	<b>Jakat debar por total Amount: <span id="jdptAmount" style="color: orange;"></span></b>
+
+	<script>
+		let personT_Amount = document.querySelector('#totalIncome');
+
+		personT_Amount.addEventListener('focus',function(){
+			personT_Amount.classList.add('totalIncomewhenfocus');
+		});
+
+		personT_Amount.addEventListener('focusout',function(){
+			personT_Amount.classList.remove('totalIncomewhenfocus');
+		});
+
+		let submitBtn = document.querySelector('#submit');
+
+		submitBtn.addEventListener('click',function(){
+
+			let personT_Amount = document.querySelector('#totalIncome');
+			let jakaterPoriman_Show = document.querySelector('#jakaterPoriman');
+			let jdptAmount_Show = document.querySelector('#jdptAmount');
+
+			let jakater_Poriman = personT_Amount.value * (2.5/100);
+
+			jakaterPoriman_Show.innerHTML = jakater_Poriman;
+
+			let jDPTA = personT_Amount.value - jakater_Poriman;
+
+			jdptAmount_Show.innerHTML = jDPTA;
+
+		});
+
+
+	</script>
+</body>
+</html>

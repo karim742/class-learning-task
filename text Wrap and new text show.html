@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .text{
+            width: 13ch;
+            white-space: nowrap;
+            overflow: hidden;
+            position: absolute;
+            top: 24px;
+            left: 80px;
+            font-size: 30px;
+            font-family: arial;
+            border-right: 2px solid black;
+            animation: subtext 14s steps(14) infinite;
+            display: none;
+            
+        }
+        .maintext{
+            width:12ch;
+            white-space: nowrap;
+            overflow: hidden;
+            position: absolute;
+            top: 24px;
+            left: 80px;
+            font-size: 30px;
+            font-family: arial;
+            border-right: 2px solid black;
+            animation: text 12s steps(12) infinite;
+            display: initial;
+            
+        }
+
+        @keyframes subtext {
+            
+            0%{
+                width: 0ch;
+            }
+            25%{
+                width: 13ch;
+            }
+            50%{
+                width: 0ch;
+            }
+            75%{
+                width: 13ch;
+            }
+            100%{
+                width: 0ch;
+            }
+
+        }
+
+        @keyframes text {
+            
+            0%{
+                width: 0ch;
+            }
+            25%{
+                width: 12ch;
+            }
+            50%{
+                width: 0ch;
+            }
+            75%{
+                width: 12ch;
+            }
+            100%{
+                width: 0ch;
+            }
+
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>I am <span class="maintext">Tushar Imran</span><span class="text">& Web-Deginer</span></h1>
+    </div>
+    
+
+    <script>
+        
+        setInterval(function(){
+            document.querySelectorAll('.maintext')[0].style.display = 'none';
+        },6200);
+
+        setInterval(function(){
+            document.querySelectorAll('.maintext')[0].style.display = 'initial';
+        },12900);
+        
+        
+        setInterval(function(){
+            document.querySelectorAll('.text')[0].style.display = 'initial';
+        },6200);
+
+        setInterval(function(){
+            document.querySelectorAll('.text')[0].style.display = 'none';
+        },12900);
+
+        
+    </script>
+</body>
+</html>

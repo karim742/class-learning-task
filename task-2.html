@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		
+		<title>Task 2</title>
+		<link rel="icon" type="image/x-icon" href="favicon.ico"/>
+		
+		<style>
+					
+						*{
+				margin:0px;
+				padding:0px;
+			}
+
+			.mainBg{
+				margin-top: 13%;
+				margin-left:50%;
+			}
+			.mainBg {
+				width: 120px;
+				height: 40px;
+				text-align: center;
+				background: tomato;
+				padding: 10px 20px;
+				border-radius: 10px;
+				position: relative;
+				overflow: hidden;
+			}
+
+			.mainBg a {
+				text-decoration: none;
+				color: white;
+				font-size: 30px;
+				transition: 0.3s;
+			}
+			.mainBg:before {
+				content: "";
+				width: 120px;
+				height: 40px;
+				background: red;
+				top: 0px;
+				left: 0px;
+				position: absolute;
+				padding: 10px 20px;
+				border-radius: 10px;
+				transform: scale(0,1);
+				transform-origin: right;
+				transition: transform 800ms cubic-bezier(0.79, 0.01, 0, 0.99);
+				}
+
+			.mainBg a span {
+				position: relative;
+				font-family: cursive;
+			}
+			.mainBg:hover:before {
+				transform: scale(1,1);
+				transform-origin: left;
+			}
+
+			.mainBg:hover a {
+				color: yellow;
+				transition-delay: 0.2s;
+			}
+					
+		</style>
+	</head>
+	
+	
+		<body>
+			
+			<div class="mainBg">
+				<a href="#"><span>Task-2</span></a>
+			</div>
+			
+			
+		</body>
+	
+</html>

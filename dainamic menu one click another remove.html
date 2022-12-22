@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+        #title{
+            text-align: center;
+
+        }
+        .container{
+            width: 1000px;
+            margin: auto;
+        }
+        .iteam{
+            padding: 20px 0px;
+        }
+        .iteam h1{
+            background-color: cadetblue;
+            padding: 10px;
+            border-radius: 4px;
+        }
+        .iteam p{
+            height: 0px;
+            overflow: hidden;
+        }
+
+        .show p{
+            height: auto !important;
+            overflow: initial !important;
+        }
+    </style>
+</head>
+<body>
+    
+
+    <div id="title">
+        <h1>More Attractive some function like menu</h1>
+    </div>
+
+    <div class="container">
+
+        <div class="iteam">
+            <h1>How are you??</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum fugit saepe tenetur ea quam quasi, consequuntur numquam sunt similique provident magnam deserunt omnis perspiciatis laborum ratione voluptatem repudiandae libero velit illum voluptates dolor error quaerat! Labore nostrum voluptatem, nesciunt quos aliquam facere exercitationem totam dolorem, quasi consectetur quas eius. Sapiente.</p>
+        </div>
+
+        <div class="iteam">
+            <h1>How are you??</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum fugit saepe tenetur ea quam quasi, consequuntur numquam sunt similique provident magnam deserunt omnis perspiciatis laborum ratione voluptatem repudiandae libero velit illum voluptates dolor error quaerat! Labore nostrum voluptatem, nesciunt quos aliquam facere exercitationem totam dolorem, quasi consectetur quas eius. Sapiente.</p>
+        </div>
+
+        <div class="iteam">
+            <h1>How are you??</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum fugit saepe tenetur ea quam quasi, consequuntur numquam sunt similique provident magnam deserunt omnis perspiciatis laborum ratione voluptatem repudiandae libero velit illum voluptates dolor error quaerat! Labore nostrum voluptatem, nesciunt quos aliquam facere exercitationem totam dolorem, quasi consectetur quas eius. Sapiente.</p>
+        </div>
+
+        <div class="iteam">
+            <h1>How are you??</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum fugit saepe tenetur ea quam quasi, consequuntur numquam sunt similique provident magnam deserunt omnis perspiciatis laborum ratione voluptatem repudiandae libero velit illum voluptates dolor error quaerat! Labore nostrum voluptatem, nesciunt quos aliquam facere exercitationem totam dolorem, quasi consectetur quas eius. Sapiente.</p>
+        </div>
+
+    </div>
+
+
+    <script>
+        const iteams = document.querySelectorAll(".iteam");
+        const questions = document.querySelectorAll(".iteam h1");
+
+
+        questions.forEach(function(question){
+            question.addEventListener("click",function(){
+                if(question.parentElement.classList.contains("show")){
+                    question.parentElement.classList.remove("show");
+                }else{
+                    questions.forEach(function(new_ques){
+                        new_ques.parentElement.classList.remove("show");
+                    });
+                    question.parentElement.classList.add("show");
+                }
+            });
+        });
+
+    </script>
+</body>
+</html>

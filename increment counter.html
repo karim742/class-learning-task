@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        .title{
+            background-color: purple;
+            color: white;
+            padding: 10px;
+            text-align: center;
+            font-family: arial;
+            font-size: 50px;
+        }
+        .counting{
+            display: flex;
+            justify-content: space-around;
+        }
+        h1{
+            font-size: 100px;
+        }
+        p{
+            font-size: 110px;
+        }
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <div class="title">
+        <h1>Skill</h1>
+    </div>
+
+    <div class="counting">
+
+        <div class="count">
+            <h1 data-count="80">0</h1>
+            <p>HTML</p>
+        </div>
+
+        <div class="count">
+            <h1 data-count="70">0</h1>
+            <p>CSS</p>
+        </div>
+
+        <div class="count">
+            <h1 data-count="60">0</h1>
+            <p>JavaScript</p>
+        </div>
+
+    </div>
+
+    <script>
+        let counts = document.querySelectorAll('.count h1');
+
+        counts.forEach(count => {
+            let countLength = count.getAttribute('data-count')
+            let i = 0;
+
+            setInterval(() => {
+                if( i < countLength){
+                    i++
+                    count.innerHTML = `${i}%`
+                }
+            }, 50);
+        })
+    </script>
+
+</body>
+</html>

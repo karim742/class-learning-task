@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/9cd77d5c26.js" crossorigin="anonymous"></script>
+    <title>Dianamic Image Silder</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>Dinamic Image Slider</h1>
+    <br>
+    <hr>
+    <br>
+
+
+    <div class="container">
+        <div class="slide_container">
+
+            <div class="controler">
+                <button class="previous"><i class="fas fa-angle-left"></i></button>
+                <button class="next"><i class="fas fa-angle-right"></i></button>
+            </div>
+
+            <div class="slide active">
+                <img src="Image/1.jpg">
+            </div>
+
+            <div class="slide">
+                <img src="Image/2.jpg">
+            </div>
+
+            <div class="slide">
+                <img src="Image/3.jpg">
+            </div>
+
+            <div class="slide">
+                <img src="Image/4.jpg">
+            </div>
+
+            <div class="slide">
+                <img src="Image/5.jpg">
+            </div>
+
+            <div class="slide">
+                <img src="Image/6.jpg">
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <ul class="bottomClick">
+
+        </ul>
+    </div>
+
+
+    <script>
+
+
+        const slides = document.querySelectorAll('.slide');
+        const img = document.querySelectorAll('.slide img')
+        const bottomClick = document.querySelector(".bottomClick");
+        const previous = document.querySelector('.previous');
+        const next = document.querySelector('.next');
+
+        let lis;
+        let actived = true
+
+        slides.forEach((value, index) => {
+            let imgAttribute = img[index].getAttribute('src');
+
+            bottomClick.innerHTML += `<li class="btn_click ${actived ? 'actived' : ''}"><img src="${imgAttribute}" /></li>`;
+
+            actived = false;
+        });
+
+        lis = document.querySelectorAll(".btn_click");
+
+
+        const changeSlider = () => {
+            slides.forEach((slide, index) => {
+                if (slide.classList.contains('active')) {
+                    currentSlide = index;
+                }
+            });
+            slides[currentSlide].classList.remove('active');
+            lis[currentSlide].classList.remove('actived')
+
+            if (currentSlide === (slides.length - 1)) {
+                slides[0].classList.add('active');
+                lis[0].classList.add('actived');
+            } else {
+                slides[currentSlide + 1].classList.add('active');
+                lis[currentSlide + 1].classList.add('actived');
+            }
+
+        }
+
+        let interval = setInterval(changeSlider, 3000);
+
+
+        next.addEventListener('click', () => {
+            clearInterval(interval)
+
+            slides.forEach(value => {
+                value.classList.remove('active')
+            })
+            lis.forEach(value => {
+                value.classList.remove('actived')
+            })
+
+            if (currentSlide === (slides.length - 1)) {
+                slides[0].classList.add('active')
+                lis[0].classList.add('actived')
+                currentSlide = 0
+            } else {
+                slides[currentSlide + 1].classList.add('active')
+                lis[currentSlide + 1].classList.add('actived')
+                currentSlide = currentSlide + 1
+            }
+            interval = setInterval(changeSlider, 3000)
+        })
+
+
+        previous.addEventListener('click', () => {
+            clearInterval(interval);
+            slides.forEach(value => {
+                value.classList.remove('active')
+            })
+            lis.forEach(value => {
+                value.classList.remove('actived')
+            })
+
+            if (currentSlide === 0) {
+                slides[slides.length - 1].classList.add('active')
+                lis[slides.length - 1].classList.add('actived')
+                currentSlide = slides.length - 1
+            } else {
+                slides[currentSlide - 1].classList.add('active')
+                lis[currentSlide - 1].classList.add('actived')
+                currentSlide = currentSlide - 1
+            }
+
+            interval = setInterval(changeSlider, 3000);
+
+        })
+
+
+        lis.forEach((value, index) => {
+            value.addEventListener('click', () => {
+                clearInterval(interval);
+
+                slides.forEach(value => {
+                    value.classList.remove('active')
+                })
+                lis.forEach(value => {
+                    value.classList.remove('actived')
+                })
+                slides[index].classList.add('active')
+                lis[index].classList.add('actived')
+
+                currentSlide = index
+                interval = setInterval(changeSlider, 3000)
+            })
+        })
+
+
+        // const slide_container = document.querySelector('.slide_container')
+
+        // slide_container.addEventListener('click', () => {
+        //     clearInterval(interval)
+        // })
+
+
+    </script>
+
+</body>
+
+</html>

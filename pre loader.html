@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Pre Loader</title>
+		<link href="https://kit-pro.fontawesome.com/releases/v5.15.1/css/pro.min.css" rel="stylesheet"/>
+		<link rel="stylesheet" href="Fontawesome_file/all.min.css">
+		<link rel="stylesheet" href="Fontawesome_file/fontawesome.min.css">
+		
+		<style>
+		
+			@import url('https://fonts.googleapis.com/css2?family=Potta+One&display=swap');
+/*font-family: 'Potta One', cursive;*/
+
+*{
+	margin: 0px;
+	padding: 0px;
+	
+}
+.preloader{
+	width: 100vw;
+	height: 100vh;
+	display: grid;
+	place-items: center;
+	position: absolute;
+	background: white;
+	top:0px;
+	left:0px;
+}
+.wrapper{
+	width: 50vw;
+	height: 50vh;
+	background: white;
+	display: grid;
+	place-items: center;
+	position: relative;
+}
+.border{
+	
+	top: 0px;
+	left: 0px;
+	width:150px;
+	height:150px;
+	position: relative;
+	border-right: 10px solid red;
+	border-radius: 50%;
+	animation:rotate 1s linear infinite;
+}
+h1{
+	position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+@keyframes rotate{
+	0%{
+		transform:rotate(0deg);
+	}
+	100%{
+		transform:rotate(360deg);
+	}
+}
+		
+		</style>
+
+	</head>
+	
+	<body onload="myFunction()">
+		
+		<div class="preloader" id="demo">
+			<div class="wrapper">
+				<div class="border"></div>
+				<h1>loading</h1>
+			</div>
+		</div>
+		
+		<div class="container">
+			
+			<iframe width="806" height="453" src="https://www.youtube.com/embed/2CYveks0RcA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+			
+			<iframe width="789" height="447" src="https://www.youtube.com/embed/Gah7-SxSQsM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+			
+			<iframe width="789" height="444" src="https://www.youtube.com/embed/1yT5hFJMXI0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+			
+			<iframe width="789" height="444" src="https://www.youtube.com/embed/fHZidqlImuA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+		
+		</div>
+	
+	
+	</body>
+	
+	<script>
+		
+		function myFunction(){
+			document.getElementById('demo').style.display = 'none';
+		}
+	
+	</script>
+	
+</html>

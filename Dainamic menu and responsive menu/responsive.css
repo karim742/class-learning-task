@@ -1,0 +1,96 @@
+@media (max-width:768px) {
+    *{
+        margin: 0px;
+        padding: 0px;
+    }
+    .container {
+        width: 100%;
+    }
+    .logo {
+        width: 80%;
+        float: left;
+        font-size: 45px;
+    }
+    .mainmenuDivition {
+        width: 20%;
+    }
+    
+    ul.mainmenu {
+        position: absolute;
+        left: -510px;
+        top: 58px;
+        width: 100%;
+        background: grey;
+        height: auto;
+        transition: all 0.4s;
+        transition-timing-function: cubic-bezier(0.77, 0.01, 0.25, 1);
+        -webkit-transition: all 0.4s;
+        -moz-transition: all 0.4s;
+        -ms-transition: all 0.4s;
+        -o-transition: all 0.4s;
+}
+    
+    ul.mainmenu li {
+        width: 100%;
+        padding: 15px;
+        position: relative;
+    }
+    ul.dropdownManu {
+        width: 100%;
+        display: initial;
+        position: relative;
+        left: 10px;
+        top: 0px;
+        background: none;
+        border: none;
+        display: none;
+    }
+    
+    ul.dropdownManu li {
+        border: none;
+        width: 70%;
+        position: relative;
+    }
+
+    
+
+    ul.submenu {
+        width: 100%;
+        display: initial;
+        position: relative;
+        left: 100px;
+        background: none;
+        border: none;
+        display: none;
+    }
+    
+    ul.submenu li {
+        border: none;
+        width: 70%;
+    }
+
+    .menuBar{
+        display: initial;
+        font-size: 60px;
+        cursor: pointer;
+        position: relative;
+        top: 7px;
+        left: 25px;
+    }
+    .showMenu{
+        left: 0px !important;
+    }
+    .show{
+        display: initial !important;
+    }
+	.menuSectionLock{
+		position: fixed;
+		top: 0px;
+	}
+		
+}
+
+.menuSectionLock{
+		position: fixed;
+		top: 0px;
+	}

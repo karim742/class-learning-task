@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Country Selector API</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* width */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        /* Track */
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+
+        /* Handle */
+        ::-webkit-scrollbar-thumb {
+            background: #ababab;
+            border-radius: 10px
+        }
+
+        /* Handle on hover */
+        ::-webkit-scrollbar-thumb:hover {
+            background: #555;
+        }
+
+        h1 {
+            background-color: purple;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            font-size: 40px;
+        }
+
+        /* .selectarea {
+            display: flex;
+            justify-content: space-around
+        } */
+
+        #countries {
+            outline: none;
+            border: none;
+            width: 33%;
+            padding: 10px;
+            background-color: #00000024;
+            color: black;
+            font-size: 18px;
+        }
+
+        #states {
+            outline: none;
+            border: none;
+            width: 33%;
+            padding: 10px;
+            background-color: #00000024;
+            color: black;
+            font-size: 18px;
+        }
+
+        #cities {
+            outline: none;
+            border: none;
+            width: 33%;
+            padding: 10px;
+            background-color: #00000024;
+            color: black;
+            font-size: 18px;
+        }
+
+        @media (max-width:795px) {
+            #countries,#states,#cities{
+                width: 100%;
+                margin-bottom: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Select your Country , States and Cities</h1>
+
+    <hr>
+    <br>
+
+    <div class="selectarea">
+        <select id="countries">
+            <option value="Select Your Country">Select Your Country</option>
+        </select>
+
+        <select id="states">
+            <option value="Select Your States">Select Your States</option>
+        </select>
+
+        <select id="cities">
+            <option value="Select Your Cities">Select Your Cities</option>
+        </select>
+    </div>
+
+
+    <script>
+        let countries = document.querySelector('#countries');
+        let states = document.querySelector('#states');
+        let cities = document.querySelector('#cities');
+
+        fetch("https://raw.githubusercontent.com/sagarshirbhate/Country-State-City-Database/master/Contries.json")
+            .then(response => response.json())
+            .then(function (data) {
+                let i = 0;
+                let countryLength = data.Countries.length;
+
+                while (i < countryLength) {
+                    countries.innerHTML += `<option value='${i}'>${data.Countries[i].CountryName}</option>`;
+                    i++;
+                }
+            });
+
+        countries.addEventListener('change', function () {
+            states.innerHTML = '';
+            let countryId = this.value;
+
+            fetch("https://raw.githubusercontent.com/sagarshirbhate/Country-State-City-Database/master/Contries.json")
+                .then(response => response.json())
+                .then(function (data) {
+                    let i = 0;
+                    let statesLength = data.Countries[countryId].States.length;
+
+                    while (i < statesLength) {
+                        states.innerHTML += `<option value='${i}'>${data.Countries[countryId].States[i].StateName}</option>`;
+                        i++;
+                    }
+                });
+        });
+
+        states.addEventListener('change', function () {
+            cities.innerHTML = '';
+            let statesId = this.value;
+
+            fetch("https://raw.githubusercontent.com/sagarshirbhate/Country-State-City-Database/master/Contries.json")
+                .then(response => response.json())
+                .then(function (data) {
+                    let selectedCountryId = countries.value;
+                    let i = 0;
+                    let citiesLength = data.Countries[selectedCountryId].States[statesId].Cities.length;
+
+                    while (i < citiesLength) {
+                        cities.innerHTML += `<option value='${i}'>${data.Countries[selectedCountryId].States[statesId].Cities[i]}</option>`;
+                        i++;
+                    }
+                });
+        })
+    </script>
+
+</body>
+
+</html>

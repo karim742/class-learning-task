@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+
+	.box:before {
+  content:var(--content,"I am a before element");
+  color:var(--color, red);
+  font-size:25px;
+}
+
+</style>
+</head>
+<body>
+
+
+<div class="box"></div>
+<div class="box"></div>
+
+<script>
+
+
+		document.querySelectorAll('.box')[0].style.setProperty("--color", "blue");
+		document.querySelectorAll('.box')[1].style.setProperty("--content", "'I am another element'");
+
+
+</script>
+
+</body>
+</html>

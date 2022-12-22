@@ -1,0 +1,267 @@
+<html>
+	<head>
+		<title>task 4</title>
+		<link rel="stylesheet" href="Fontawesome_file/all.min.css">
+		<link rel="stylesheet" href="Fontawesome_file/fontawesome.min.css">
+		
+		
+		<style>
+		
+			*{
+	margin:0px;
+	padding:0px;
+	box-sizing:border-box;
+}
+.full_screen {
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    place-items: center;
+}
+
+.full_screen:after {
+    content: "";
+    width: 400px;
+    height: 100vh;
+    position: absolute;
+    background: #2C64FF;
+}
+.child_box {
+    width: 1062px;
+    height: 570px;
+    background: #fff;
+    z-index: 1;
+    -webkit-box-shadow: 0px 10px 13px -7px #000000, 0px 15px 20px -26px rgba(0,0,0,0);
+    box-shadow: 0px 11px 13px -7px #000000, 0px 10px 20px -37px rgb(0 0 0 / 0%);
+}
+.left_side_video{
+	width:50%;
+	height: 100%;
+	float: left;
+	position: relative;
+	background-image: url("download.jpg");
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+}
+.right_side_content{
+	width:50%;
+	height: 100%;
+	float: right;
+	padding: 30px 35px 30px 35px;
+	display: flex;
+	flex-direction: column;
+}
+.right_side_topcontent {
+    width: fit-content;
+    height: 35px;
+    color: #2C64FF;
+    font-family: arial;
+    position: relative;
+    right: -58%;
+}
+.left_side_video:before {
+    content: "";
+    background-color: #2c64ff47;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+.right_side_content_wrapper {
+    width: 80%;
+    margin: auto;
+    background: white;
+    height: 100%;
+    font-family: arial;
+}
+.right_side_content_wrapper_Main_title h1 {
+    color: black;
+    font-size: 35px;
+}
+
+.right_side_content_wrapper_Main_title p {
+    color: grey;
+    font-size: 17px;
+}
+
+.right_side_content_wrapper_userInpur {
+    margin-top: 30px;
+    width: 380px;
+    height: 170px;
+}
+
+.right_side_content_wrapper_userInpur i {
+    position: relative;
+    left: 3%;
+		top: 2px;
+    color: grey;
+}
+
+.right_side_content_wrapper_userInpur input {
+    padding: 15px 20px 15px 32px;
+    outline: none;
+    border: 1px solid #80808061;
+    border-radius: 3px;
+    margin: 10px 0px 10px -20px;
+    width: 290px;
+}
+.right_side_content_wrapper_Btn a {
+    width: fit-content;
+    position: relative;
+    top: 20px;
+    padding: 10px;
+    background: #2C64FF;
+    border-radius: 7px;
+    text-decoration: none;
+    color: white;
+}
+
+.right_side_content_wrapper_Btn p {
+    position: relative;
+    top: 40px;
+    width: fit-content;
+    font-size: 15px;
+}
+
+.right_side_footer_content {width: 100%;margin-top: 10px;}
+
+.right_side_content_wrapper_Btn {
+    width: 100%;
+    height: 100px;
+    border-bottom: 1px solid grey;
+}
+
+.right_side_content_wrapper_Btn p span {
+    color: blue;
+}
+.right_side_footer_content .dur1 h3 span#okey {
+    width: 15px;
+    height: 15px;
+    background: black;
+    color: white;
+    border-radius: 50%;
+    display: inline-grid;
+    place-items: center;
+    font-size: 9px;
+}
+
+.right_side_footer_content .dur1 h3 span#sala i {
+    transform: rotate(180deg);
+    font-size: 12px;
+}
+.right_side_footer_content .dur1 h3 span#sala {
+    display: inline;
+}
+.right_side_footer_content .dur2 {
+    width: 100%;
+    color: grey;
+    margin: 0px 0px 14px 0px;
+}
+.right_side_footer_content .dur3 {
+    color: blue;
+}
+.right_side_footer_content .dur1 p {
+    position: relative;
+    top: -18px;
+    left: 35px;
+}
+.left_side_video .midle_icon i {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 60px;
+    height: 60px;
+    background: #eeeeeeab;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    font-size: 21px;
+    color: #2c64ffa6;
+}
+.toptitle i {
+    color: white;
+}
+.toptitle {
+    color: white;
+    font-size: 40px;
+    margin: 10px 0px 0px 20px;
+}
+
+		
+		</style>
+		
+		
+	</head>
+
+	<body>
+
+			<section id="Main_body">
+				<div class="full_screen">
+					<div class="child_box">
+						<div class="left_side_video">
+							<div class="toptitle">
+								<i class="fas fa-play"></i> <span>billage</span>
+							</div>
+							<div class="midle_icon">
+								<i class="fas fa-play"></i>
+							</div>
+						</div>
+						<div class="right_side_content">
+							<div class="right_side_topcontent">
+								<p>Ya tengo usuario de billage</p>
+							</div>
+							<div class="right_side_content_wrapper">
+
+
+
+								<div class="right_side_content_wrapper_Main_title">
+									<h1>Resistrate ahora</h1>
+									<p>Perueba gratis billage 15 dias</p>
+								</div>
+
+								<div class="right_side_content_wrapper_userInpur">
+
+									<label for="email">Email</label><br/>
+									<i class="far fa-envelope"></i>
+									<input type="email" name="email" placeholder="Tu dericcion de email"/><br/>
+
+									<label for="password">Contrasena</label><br/>
+									<i class="fas fa-lock"></i>
+									<input type="password" name="password" placeholder="Tu contrasena"/><br/>
+
+								</div>
+
+								<div class="right_side_content_wrapper_Btn">
+									<a href="#">Emperza Preuba ahora</a>
+
+									<p>Al registrame acepto las <span>condiciones generales de uso</span></p>
+								</div>
+
+
+
+								<div class="right_side_footer_content">
+									<div class="dur1">
+										<h3><span id="okey"><i class="fas fa-question"></i></span>
+											<span id="sala"><i class="fas fa-question"></i></span>
+											<p>Puedo cambiar de-plan</p></h3>
+									</div>
+									<div class="dur2">
+										<p>duro matha nosto ki lekha e gula dir hsajj skjcb vsbvjb djn gdjhjj dfkjghsfjgh</p>
+									</div>
+									<div class="dur3">
+										<p>leer todayt nuestrasd preguntas frecuentes</p>
+									</div>
+								</div>
+
+
+							</div>
+
+
+						</div>
+					</div>
+				</div>
+			</section>
+
+	</body>
+
+</html>

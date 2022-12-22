@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Nasim Vai task</title>
+    <script src="https://kit.fontawesome.com/afd52fc722.js" crossorigin="anonymous"></script>
+    
+	
+	<style>
+	
+		*{
+  margin:0px;
+  padding: 0px;
+}
+.headerMainBox {
+    width: 100%;
+    height: 30px;
+    background-color: #28406C;
+}
+
+.container {
+    width: 85%;
+    margin: auto;
+    height: 0px;
+}
+
+.headerTitle {
+    width: 520px;
+    display: inline-block;
+    height: 30px;
+    transform: translateY(5px);
+}
+
+.headerTitle p {
+    display: inline-block;
+    color: white;
+    font-family: arial;
+    font-size: 13px;
+    margin-right: 50px;
+}
+
+.headerLn_icon {
+    display: inline-block;
+    height: 30px;
+    float: right;
+    margin-top: 3px;
+}
+
+.headerLn_icon ul {
+    display: inline-block;
+    list-style: none;
+    transform: translateY(1px);
+}
+
+.headerLn_icon ul li {
+    display: grid;
+    width: 20px;
+    height: 20px;
+    background-color: #A2D650;
+    place-items: center;
+    float: left;
+    margin-right: 15px;
+    border-radius: 100%;
+}
+
+.headerLn_icon p {
+    display: inline-block;
+    color: white;
+    font-family: sans-serif;
+    margin-right: 26px;
+    transform: translateY(-5px);
+}
+.headerTitle i {
+    color: #A2D650;
+    margin-right: 10px;
+}
+.headerTitle p span {
+    font-weight: 900;
+}
+.logo_Box img {
+    width: 100px;
+    height: auto;
+    transform: translateY(30px);
+}
+
+.logo_Box_text {
+    display: inline-block;
+    transform: translateY(10px);
+    color: #28406C;
+}
+
+.mainLogoBox {
+    width: 100%;
+    background: white;
+    height: 120px;
+    border-bottom: 2px solid #ababab59;
+}
+
+.logo_Box_contect {
+    float: right;
+    display: flex;
+    margin-top: -35px;
+}
+
+.logo_Box_text span {
+    font-weight: 700;
+    font-family: monospace;
+    font-size: 20px;
+}
+.logo_Box_1 {
+    float: left;
+    margin-right: 30px;
+    line-height: 30px;
+}
+
+.logo_Box_1 span {
+    color: green;
+    font-family: cursive;
+}
+.logo_Box_2 span {
+    color: green;
+    font-family: cursive;
+}
+
+.logo_Box_1 p {
+    font-family: arial;
+    color: #28406C;
+    font-weight: 700;
+}
+
+.logo_Box_2 p {
+    font-family: arial;
+    color: #28406C;
+    font-weight: 700;
+}
+
+.logo_Box_2 {
+    line-height: 30px;
+}
+.menu_box {
+    width: 100%;
+    height: 45px;
+    background: white;
+}
+
+.main_Menu ul {
+    list-style: none;
+    margin-top: 12px;
+}
+
+.main_Menu ul li {
+    display: inline-block;
+    margin-right: 20px;
+    padding: 0px 10px 0px 10px;
+    border-right: 1px solid #bcbcbc;
+}
+
+.main_Menu ul li a {
+    text-decoration: none;
+    color: #808080d4;
+    font-family: arial black;
+    letter-spacing: 1px;
+    font-size: 13px;
+}
+.main_Menu ul li:last-child {
+    border: none;
+    float: right;
+}
+.main_Menu ul li:last-child a {
+    color: #28406C !important;
+}
+.headerLn_icon ul li a {
+    font-size: 11px;
+}
+.about_bg_pic {
+    background-image: url("abot_bg.jpg");
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 440px;
+    background-size: cover;
+}
+.about_box {
+    width: 350px;
+    background-color: #28406C;
+    height: 360px;
+    padding: 40px;
+}
+
+.about_box_title h1 {
+    font-family: arial black;
+    margin-top: 25px;
+    color: white;
+}
+
+.for_solid_line {
+    width: 230px;
+    height: 10px;
+    background-color: #A8D85E;
+    margin: 35px 0px 35px 0px;
+}
+
+.about_box_para p {
+    text-align: justify;
+    font-family: arial;
+    color: white;
+    font-size: 13px;
+    margin-bottom: 40px;
+}
+.about_box_btn a {
+    text-decoration: none;
+    color: black;
+    background: #A8D85E;
+    font-family: cursive;
+    padding: 10px 15px 10px 15px;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.about_box_btn {
+    margin-top: 65px;
+}
+
+.about_box_para {
+    margin-top: 52px;
+}
+.kiclassditam {
+    width: 100%;
+    height: 240px;
+    background: white;
+    border-bottom: 2px solid #aaaaaa;
+    margin-bottom: 100px;
+}
+.single_box {
+    width: 355px;
+    display: inline-block;
+}
+
+.single_box_icon {
+    width: 60px;
+    height: 60px;
+    background-color: #A8D85E;
+    display: grid;
+    place-items: center;
+    font-size: 25px;
+    border-radius: 100%;
+    transform: translate(5px, 15px);
+}
+
+.single_box_title {
+    transform: translate(90px, -40px);
+    width: 85%;
+    font-family: monospace;
+}
+
+.single_box_para {
+    transform: translate(90px, -31px);
+    width: 77%;
+    font-family: system-ui;
+    font-size: 14px;
+}
+.single_box_wrapper {
+    transform: translateY(47px);
+}
+.about_box_btn:hover a {
+    color: white;
+    background: #92dc1f;
+}
+#active{
+  text-decoration: underline;
+  text-decoration-color: #28406C;
+  text-decoration-thickness: 3px;
+  color: #28406C;
+}
+
+	
+	</style>
+	
+	
+  </head>
+  <body>
+
+
+    <section>
+      <div class="headerMainBox">
+        <div class="container">
+          <div class="headerTitle">
+            <i class="fas fa-map-marker-alt"></i>
+            <p><span>Location:</span>110 South Street,NY</p>
+            <i class="far fa-envelope"></i>
+            <p><span>E-mail:</span>Sails@codeless.co</p>
+          </div>
+          <div class="headerLn_icon">
+            <p>English <i class="fas fa-caret-down"></i></p>
+
+            <ul>
+              <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+              <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+              <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="mainLogoBox">
+        <div class="container">
+          <div class="logo_Box">
+            <img src="logo.png" alt="logo">
+            <div class="logo_Box_text">
+              <span>HENDLE</span><br>
+              <span>CORPORATE DEMO</span>
+            </div>
+          </div>
+          <div class="logo_Box_contect">
+            <div class="logo_Box_1">
+              <span>CONTECT US TODAY</span><br>
+              <p>(001) 355 441 1188</p>
+            </div>
+            <div class="logo_Box_2">
+              <span>OPEN HOURS DAYS</span><br>
+              <p>MON-FRY 09:00 - 12:00</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="menu_box">
+        <div class="container">
+          <div class="main_Menu">
+            <ul>
+              <li><a href="#" id="active">HOME</a></li>
+              <li><a href="#">ABOUT  COMPANY</a></li>
+              <li><a href="#">OUR  SERVICE</a></li>
+              <li><a href="#">OUR  PAGES</a></li>
+              <li><a href="#">NEWS</a></li>
+              <li><a href="#">WORKS / CASES</a></li>
+              <li><a href="#"><i class="fas fa-search"></i></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="about_bg_pic">
+        <div class="container">
+          <div class="about_box">
+            <div class="about_box_title">
+              <h1>INVESTMENTS STOCK & CONSULTANCY BUSINESS</h1>
+            </div>
+            <div class="for_solid_line"></div>
+            <div class="about_box_para">
+              <p>Ooo allah help me ...many many painful.Ooo allah help me ...many many painful.Ooo allah help me ...many many painful.Ooo allah help me ...many many painful.Ooo allah help me ...many many painful.Ooo allah help me .</p>
+            </div>
+            <div class="about_box_btn">
+              <a href="#">PURCHASE NOW</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <section>
+      <div class="kiclassditam">
+        <div class="container">
+
+          <div class="single_box_wrapper">
+          <div class="single_box">
+            <div class="single_box_icon">
+              <i class="far fa-chart-bar"></i>
+            </div>
+            <div class="single_box_title">
+              <h2>Large Investment & stock Excharge Company</h2>
+            </div>
+            <div class="single_box_para">
+              <p>On the other hand dennounce with right ous ingetion and dislike man who are so beguild</p>
+            </div>
+          </div>
+
+          <div class="single_box">
+            <div class="single_box_icon">
+              <i class="fas fa-globe-europe"></i>
+            </div>
+            <div class="single_box_title">
+              <h2>Large Investment & stock Excharge Company</h2>
+            </div>
+            <div class="single_box_para">
+              <p>On the other hand dennounce with right ous ingetion and dislike man who are so beguild</p>
+            </div>
+          </div>
+
+          <div class="single_box">
+            <div class="single_box_icon">
+              <i class="fab fa-connectdevelop"></i>
+            </div>
+            <div class="single_box_title">
+              <h2>Large Investment & stock Excharge Company</h2>
+            </div>
+            <div class="single_box_para">
+              <p>On the other hand dennounce with right ous ingetion and dislike man who are so beguild</p>
+            </div>
+          </div>
+        </div>
+
+
+        </div>
+      </div>
+    </section>
+
+
+
+
+
+  </body>
+</html>
